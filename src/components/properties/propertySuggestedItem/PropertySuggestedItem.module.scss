@@ -1,0 +1,90 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.property-suggested-item {
+  box-shadow: $shadow-small;
+  border-radius: $border-radius-small;
+  border: 1px solid $color-border;
+  display: flex;
+  position: relative;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  width: 18%;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: $shadow-regular;
+  }
+
+  @include tabletBreakpoint {
+    width: 30%;
+  }
+
+  @include mobileBreakpoint {
+    width: 100%;
+  }
+
+  .property-suggested-item-section-image {
+    .property-suggested-item-profile {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .property-agent-infos-agent-name {
+        text-transform: capitalize;
+      }
+    }
+
+    .property-suggested-item-image-headband {
+      z-index: 1;
+      position: absolute;
+      background-color: $color-dark-low-opacity;
+      width: 100%;
+      height: 50px;
+      border-radius: $border-radius-small $border-radius-small 0px 0px;
+    }
+
+    .property-suggested-item-image-main {
+      height: 10rem;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: $border-radius-small $border-radius-small 0px 0px;
+        object-fit: cover;
+      }
+
+      span {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        padding-top: 6rem;
+      }
+    }
+  }
+
+  .property-suggested-item-info {
+    padding: 0.5rem;
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    @include mobileBreakpoint {
+      height: 11rem;
+    }
+
+    .property-suggested-item-info-title {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 17px;
+    }
+  }
+}

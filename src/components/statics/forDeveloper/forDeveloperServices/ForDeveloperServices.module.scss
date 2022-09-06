@@ -1,0 +1,22 @@
+.page-for-developer__pricing__services-item {
+  display: flex;
+  justify-content: center;
+
+  .__pricing__services-item__image {
+    width: 20%;
+    align-self: center;
+  }
+
+  .__pricing__services-item__text {
+    text-align: start;
+    width: 79%;
+
+    p {
+      font-size: 13px;
+    }
+
+    .__pricing__services-item__text-options {
+      font-style: italic;
+    }
+  }
+}

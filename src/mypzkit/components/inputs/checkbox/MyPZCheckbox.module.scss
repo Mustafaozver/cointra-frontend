@@ -1,0 +1,33 @@
+@import '../../mypz.scss';
+
+.mypz-checkbox {
+  cursor: pointer;
+  display: inline-block;
+
+  &.mypz-checkbox__disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .mypz-checkbox__box {
+    display: inline-block;
+    margin-right: 0.25rem;
+
+    &.mypz-checkbox__box-checked {
+      color: $color-main;
+    }
+
+    svg {
+      vertical-align: bottom;
+    }
+
+    &:hover {
+      color: $color-main;
+    }
+  }
+
+  .mypz-checkbox__label {
+    display: inline-block;
+    vertical-align: text-top;
+  }
+}

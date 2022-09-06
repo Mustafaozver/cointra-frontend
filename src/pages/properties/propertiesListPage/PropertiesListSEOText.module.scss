@@ -1,0 +1,35 @@
+@import "../../../mypzkit/components/mypz";
+
+.property-list-seo-text {
+  font-size: 0.9rem;
+  margin: 2rem 0;
+
+  .property-list-seo-text__block {
+    margin: 1rem 0;
+  }
+
+  .property-list-seo-text__block-small {
+    margin-bottom: 0.5rem;
+  }
+
+  .property-list-seo-text__title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+
+  .property-list-seo-text__list-item {
+    margin: 0.5rem 1.5rem;
+    display: list-item;
+    list-style: disc;
+  }
+
+  .property-list-seo-text__sub-title {
+    margin: 0.25rem 0;
+  }
+
+  .property-list-seo-text__link {
+    color: $color-link;
+    font-size: 0.9rem;
+  }
+}

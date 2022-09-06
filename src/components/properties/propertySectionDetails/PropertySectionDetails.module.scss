@@ -1,0 +1,39 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.property-section-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .property-section-details__items {
+    width: 32%;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    background-color: $color-highlight-bg;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0rem;
+    display: inline-flex;
+    justify-content: space-between;
+
+    @include tabletBreakpoint {
+      width: 45%;
+    }
+
+    @include mobileBreakpoint {
+      width: 100%;
+    }
+
+    .property-section-details__items-value {
+      font-size: 14px;
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+
+    .property-section-details__items-name {
+      color: $color-details-name;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}
+

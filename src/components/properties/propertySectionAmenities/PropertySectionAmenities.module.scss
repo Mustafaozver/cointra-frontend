@@ -1,0 +1,15 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.property-section-amenities {
+  display: flex;
+  flex-wrap: wrap;
+
+  .property-section-amenities__item {
+    font-size: 14px;
+    border: 1px $color-border solid;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

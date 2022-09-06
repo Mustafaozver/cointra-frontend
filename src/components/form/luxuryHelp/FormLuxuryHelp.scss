@@ -1,0 +1,41 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.form-luxury-help {
+  font-size: 13px;
+  text-align: start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .form-luxury-help__alert {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .form-luxury-help__input {
+    width: 48%;
+    margin-bottom: 1rem;
+
+    @include mobileBreakpoint() {
+      width: 100%;
+    }
+  }
+
+  .form-luxury-help__input-checkbox {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .form-luxury-help__input-area {
+    width: 100%;
+  }
+
+  .input-checkbox__text {
+    font-size: 13px;
+  }
+
+  .form-luxury-help__input-button {
+    width: 10rem;
+    margin: auto;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.call-button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1px;
+
+  .text-call-button {
+    &.active {
+      white-space: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      font-size: 11px;
+      width: 4rem;
+
+      @include mobileBreakpoint {
+        width: 100%;
+      }
+
+      @include tabletBreakpoint {
+        width: 100%;
+      }
+    }
+  }
+}

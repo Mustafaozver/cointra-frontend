@@ -1,0 +1,74 @@
+@import "../../../../mypzkit/components/mypz.scss";
+
+.concierge-service-package {
+
+  .concierge-service-package__items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    flex-wrap: wrap;
+
+    @include desktopBreakpoint {
+      flex-wrap: nowrap;
+    }
+
+    .package-pricing__item {
+      box-sizing: border-box;
+      padding: 1.5rem;
+      border: 1px solid $color-border;
+      border-radius: 0.8rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      
+      @include desktopBreakpoint {
+        width: 32%;
+      }
+
+      .package-pricing__item-name {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .package-pricing__item-description {
+        font-size: 12px;
+      }
+
+      .package-pricing__item-badge {
+        position: absolute;
+        font-weight: bold;
+        color: $color-main;
+        font-size: 10px;
+      }
+
+      .package-pricing__item-price {
+        margin-top: 1rem;
+
+        .package-pricing__item-currency {
+          font-size: 16px;
+          font-weight: bold;
+          vertical-align: top;
+        }
+
+        .package-pricing__item-price__value {
+          font-size: 3rem;
+          font-weight: bold;
+        }
+
+        .package-pricing__item-price__unit {
+          font-size: 12px;
+          vertical-align: bottom;
+        }
+      }
+
+      .package-pricing__item-feature {
+        text-align: start;
+
+        .feature__item {
+          font-size: 13px;
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}

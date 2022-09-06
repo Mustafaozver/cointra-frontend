@@ -1,0 +1,14 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.property-view-selector {
+  .property-view-selector-icon {
+    color: $color-third;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 0.5rem;
+
+    &.active {
+      color: $color-main;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import "../../mypzkit/components/mypz.scss";
+
+.footer {
+    color: white;
+    position: relative;
+    background-color: $color-main;
+
+    .footer-subscribe-button {
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
+    }
+
+    .footer-main-container {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+
+        .footer__logo {
+            display: flex;
+            justify-content: space-between;
+            width: 12rem;
+
+            @include mobileBreakpoint {
+                margin: auto;
+            }
+
+            @include tabletBreakpoint {
+                margin: auto;
+            }
+        }
+
+        @include mobileBreakpoint {
+            display: block;
+            text-align: center;
+        }
+
+        @include tabletBreakpoint {
+            display: block;
+            text-align: center;
+        }
+
+        .footer-links-container {
+            flex-basis: 66%;
+            display: flex;
+            flex-wrap: wrap;
+
+            .footer-link-item {
+                flex-basis: 33%;
+
+                a {
+                    margin-right: 0.2rem;
+                }
+
+                @include mobileBreakpoint {
+                    flex-basis: 100%;
+                }
+            }
+        }
+
+        .footer-action-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 40rem;
+            text-align: center;
+            margin: auto;
+
+            .footer-subscribe-container {
+                background-color: white;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                display: flex;
+                justify-content: space-between;
+                margin: 0.5rem 0;
+
+                .footer-subscribe-container__input {
+                    flex: 1;
+                }
+            }
+        }
+
+        .footer-social-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 0.8rem;
+            
+            a {
+                transition: all 0.2s ease-in-out;
+                margin-left: 10px;
+                width: 30px;
+                height: 25px;
+                text-align: center;
+
+                &:hover {
+                    padding-top: 5px;
+                }
+
+                img {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .footer-separator {
+        margin-top: 20px;
+        border: 0;
+        border-top: 1px solid #eee;
+    }
+
+    .footer-rights {
+        font-size: 12px;
+        vertical-align: middle;
+        margin: 1rem;
+    }
+
+    .footer-mobile-download-links-container {
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem 0;
+
+        @include mobileBreakpoint {
+            display: block;
+        }
+
+        .footer-mobile-download-link {
+            min-width: 7rem;
+            max-width: 10rem;
+            margin: 0 0.5rem;
+            cursor: pointer;
+
+            @include mobileBreakpoint {
+                margin: auto;
+                width: 12rem;
+            }
+        }
+    }
+}

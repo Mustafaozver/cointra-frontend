@@ -1,0 +1,45 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.property-highlight {
+  display: flex;
+  justify-content: space-around;
+  
+  @include mobileBreakpoint {
+    flex-wrap: wrap;
+  }
+
+  .property-highlight__item {
+    display: flex;
+
+    @include mobileBreakpoint {
+      width: 40%;
+    }
+
+    .property-highlight__item-icon {
+      background-color: white;
+      border-radius: 50%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .property-highlight__item-details {
+      display: flex;
+      align-items: center;
+      margin-left: 0.5rem;
+      font-weight: bold;
+      font-size: 15px;
+
+      .item-details__value {
+        color: black;
+      }
+
+      .item-details__text {
+        color: black;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+@import "../../mypzkit/components/mypz.scss";
+
+.properties-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .properties-filters__sticky {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    margin: 0;
+
+    .properties-filters__group {
+      border-radius: 0 0 1rem 1rem;
+      padding-top: 0.5rem;
+
+      .properties-filters__item-location {
+        @include mobileBreakpoint {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .properties-filters__group {
+    background-color: $color-filter-background;
+    border-radius: 1rem;
+    padding: 0.1rem 1.3rem 1.3rem 1.3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+    .properties-filters__item-location {
+      width: 60%;
+
+      @include mobileBreakpoint {
+        width: 100%;
+      }
+    }
+
+    .properties-filters__item-for {
+      width: 35%;
+
+      @include mobileBreakpoint {
+        width: 100%;
+      }
+    }
+
+    .properties-filters__price-area-group {
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+
+      @include tabletBreakpoint {
+        width: 100%;
+      }
+
+      @include mobileBreakpoint {
+        width: 100%;
+      }
+    }
+
+    .properties-filters__item-price {
+      width: 45%;
+    }
+
+    .properties-filters__item-area {
+      width: 45%;
+    }
+
+    .properties-filters__bed-bath-filter-group {
+      display: flex;
+      justify-content: space-between;
+      width: 35%;
+
+      @include tabletBreakpoint {
+        width: 100%;
+      }
+
+      @include mobileBreakpoint {
+        width: 100%;
+      }
+    }
+
+    .properties-filters__item-bedrooms {
+      width: 30%;
+    }
+
+    .properties-filters__item-bathrooms {
+      width: 30%;
+    }
+
+    .properties-filters__all-filters {
+      font-size: 14px;
+      width: 30%;
+
+      button {
+        font-weight: inherit;
+      }
+    }
+
+    .properties-filters__reset-all {
+      color: $color-main;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-main-lighter;
+      }
+    }
+
+    .properties-filters__label {
+      color: white;
+      margin: 0.2rem 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.properties-filters__modal {
+  width: 20rem;
+  box-sizing: border-box;
+  background-color: $color-filter-background;
+  padding: 0.5rem 1rem 1rem 1rem;
+    
+  @include tabletBreakpoint {
+    width: 100%;
+  }
+
+  @include mobileBreakpoint {
+    width: 100%;
+  }
+
+  .properties-filters__label {
+    color: white;
+    margin: 0.3rem 0 0.3rem 0;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .properties-filters__reset-all {
+    color: $color-main;
+    display: flex;
+    flex-direction: row-reverse;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-main-lighter;
+    }
+  }
+}

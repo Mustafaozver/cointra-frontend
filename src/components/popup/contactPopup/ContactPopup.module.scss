@@ -1,0 +1,185 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.contact-popup {
+  min-width: 30rem;
+  padding: 2rem;
+
+  @include mobileBreakpoint {
+    padding: 0.5rem;
+  }
+
+  .contact-popup__title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @include mobileBreakpoint {
+      font-size: 1.25rem;
+    }
+  }
+
+  .contact-popup__agent {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-popup__agent-header {
+    display: flex;
+  }
+
+  .contact-popup__agent-header-image {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  .contact-popup__agent-header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .contact-popup__agent {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .contact-popup__agent-header {
+    display: flex;
+  }
+
+  .contact-popup__agent-header-image {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  .contact-popup__agent-header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .contact-popup__agent-name {
+    font-weight: bold;
+  }
+
+  .contact-popup__property {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-popup__property-header {
+    display: flex;
+  }
+
+  .contact-popup__property-header-image {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  .contact-popup__property-header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .contact-popup__property-title {
+    font-weight: bold;
+  }
+
+  .contact-popup__login {
+    margin-bottom: 1rem;
+  }
+
+  .contact-popup__login-button {
+    margin-top: 1rem;
+  }
+
+  .contact-popup__tagline {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    text-align: center;
+
+    @include mobileBreakpoint {
+      font-size: 1rem;
+    }
+  }
+
+  .contact-popup__input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contact-popup__input-item {
+    margin-top: 1.5rem;
+    width: 45%;
+
+    @include mobileBreakpoint {
+      width: 100%;
+    }
+  }
+
+  .contact-popup__checkbox {
+    text-align: center;
+  }
+
+  .contact-popup__property-preferences {
+    margin-top: 1rem;
+  }
+
+  @include mobileBreakpoint {
+    min-width: 0;
+  }
+
+  .contact-popup__header{
+    display: flex;
+
+    .property-agent-infos-agent-name {
+      color: $color-dark-text;
+    }
+  }
+
+  .contact-popup__input {
+    margin-top: 1rem;
+  }
+
+  .contact-popup__separator {
+    border-bottom: 1px solid $color-border;
+    margin: 0 auto 1.5rem;
+  }
+
+  .contact-popup__agent-name {
+    text-transform: capitalize;
+  }
+
+  .contact-popup__input-button {
+    margin-top: 0.5rem;
+
+    @include mobileBreakpoint {
+      margin-bottom: 1rem;
+    }
+  }
+}

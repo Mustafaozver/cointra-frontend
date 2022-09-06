@@ -1,0 +1,45 @@
+@import "../../mypz.scss";
+
+.mypz-text-field {
+    .mypz-text-field__label {
+        font-size: inherit;
+        font-weight: bold;
+        color: $color-third;
+        padding-bottom: 0.3rem;
+    }
+
+    .mypz-text-field__alert {
+        font-size: inherit;
+        color: $color-main;
+        visibility: hidden;
+    }
+
+    input {
+        box-sizing: border-box;
+        font-size: inherit;
+        border: none;
+        border-bottom: 1px solid $color-border;
+        width: 100%;
+        padding: 6px;
+        height: 100%;
+        outline: none;
+
+        &:focus {
+            border-bottom: 1px solid $color-main;
+        }
+    }
+
+    &.show-error {
+        .mypz-text-field__alert {
+            visibility: visible;
+        }
+
+        .mypz-text-field__label {
+            color: $color-main;
+        }
+
+        input {
+            border-bottom: 1px solid $color-main;
+        }
+    }
+}

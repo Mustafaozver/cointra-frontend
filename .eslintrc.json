@@ -1,0 +1,40 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:@next/next/recommended"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "requireConfigFile": false,
+        "babelOptions": {
+            "presets": ["@babel/preset-react"]
+        }
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/display-name": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "no-use-before-define": "off",
+        "react/no-unescaped-entities": "off",
+        "react/prop-types": "off",
+        "react/jsx-props-no-spreading": "off",
+        "quotes": ["error", "single", "avoid-escape"],
+        "quote-props": ["error", "as-needed"],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "object-curly-spacing": ["error", "always"],
+        "key-spacing": ["error"],
+        "indent": ["error", 2]
+    }
+}

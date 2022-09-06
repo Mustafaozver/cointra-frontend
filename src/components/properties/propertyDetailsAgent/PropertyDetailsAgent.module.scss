@@ -1,0 +1,51 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.property-detail-agent {
+
+  .property-detail-agent__header {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 12px 12px 0px 0px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $color-border;
+    border-right: 1px solid $color-border;
+    border-left: 1px solid $color-border;
+
+    .property-detail-agent__header-name {
+      font-weight: bold;
+      font-size: 14px;
+      margin-left: 0.5rem;
+    }
+
+    .property-detail-agent__header-image {
+      height: 4.5rem;
+      width: 4.5rem;
+      border-radius: 50%;
+      border: 2px solid white;
+      background-color: $color-third-light;
+
+      img {
+        object-fit: cover;
+        border-radius: 50%;
+        width: 4.5rem;
+      }
+    }
+  }
+
+  .property-detail-agent__contact {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-border;
+    border-right: 1px solid $color-border;
+    border-left: 1px solid $color-border;
+    border-radius: 0px 0px 12px 12px;
+
+    .property-detail-agent__contact-button {
+      display: inline-block;
+      max-height: 3rem;
+      min-width: 47%;
+    }
+  }
+}

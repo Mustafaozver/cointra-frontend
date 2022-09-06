@@ -1,0 +1,107 @@
+@import "../../mypzkit/components/mypz.scss";
+
+.for-broker-page {
+  padding: 1rem;
+
+  .for-broker-page__head-container {
+    display: flex;
+
+    @include mobileBreakpoint {
+      display: block;
+    }
+    @include tabletBreakpoint {
+      display: block;
+    }
+  }
+
+  .for-broker-page__head-container-item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mobileBreakpoint {
+      width: 100%;
+    }
+    @include tabletBreakpoint {
+      width: 100%;
+    }
+  }
+
+  .for-broker-page__title {
+    margin: 1rem 0;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .for-broker-page__header {
+    margin: 1rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .for-broker-page__join {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 4rem;
+  }
+
+  .for-broker-page__do-best {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 4rem;
+  }
+
+  .for-broker-page__reshape {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 4rem;
+  }
+
+  .for-broker-page__form-title {
+    margin: 2rem 0;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .for-broker-page__form {
+    margin: 1rem auto;
+    max-width: 70%;
+    border: solid 1px $color-border;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .for-broker-page__form__inputs-text,
+  .for-broker-page__form__inputs-area {
+    margin-bottom: 1rem;
+  }
+
+  .for-broker-page__form__inputs-button {
+    margin: 3rem 0 0 0;
+  }
+
+  .for-broker-page__list {
+    line-height: 1.5rem;
+  }
+
+  .for-broker-page__list-icon {
+    color: #00cb3d;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    vertical-align: bottom;
+
+    svg {
+      font-size: inherit;
+      vertical-align: inherit;
+    }
+  }
+}

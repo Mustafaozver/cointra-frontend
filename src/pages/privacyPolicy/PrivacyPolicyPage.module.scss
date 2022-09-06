@@ -1,0 +1,63 @@
+@import "../../mypzkit/components/mypz.scss";
+
+.page-privacy-policy {
+
+  .page-privacy-policy__titles {
+    display: inline-block;
+
+    h1, h2 {
+      display: inline-block;
+    }
+
+    span {
+      margin: 1rem;
+    }
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .page-privacy-policy__content {
+    white-space: break-spaces;
+    ol {
+      li {
+        list-style: upper-roman;
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 1rem;
+
+        ol {
+          li {
+            font-weight: lighter;
+            list-style: upper-alpha;
+            font-size: 13px;
+            margin-bottom: 0.5rem;
+
+            ol {
+              li {
+                list-style: decimal;
+                font-size: 12px;
+                margin-bottom: 0.2rem;
+
+                ol {
+                  li {
+                    list-style: lower-alpha;
+                    font-size: 11px;
+                    margin-bottom: 0.2rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-privacy-policy__footer {
+    font-weight: bold;
+    margin: 1rem 0;
+    font-size: 13px;
+  }
+}

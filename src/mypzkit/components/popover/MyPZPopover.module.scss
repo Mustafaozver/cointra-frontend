@@ -1,0 +1,36 @@
+@import '../mypz.scss';
+
+.mypz-popover {
+  width: 100%;
+  position: relative;
+  
+  .mypz-popover-opener {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .mypz-popover-content {
+    z-index: 99;
+    background: $color-light;
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    border: 1px $color-border solid;
+    margin-top: 0.2rem;
+    position: absolute;
+    min-width: 100%;
+    box-sizing: border-box;
+    
+    &.anchor-right {
+      left: 0;
+    }
+    
+    &.anchor-left {
+      right: 0;
+    }
+
+    &.content-closed {
+      display: none;
+    }
+  }
+}

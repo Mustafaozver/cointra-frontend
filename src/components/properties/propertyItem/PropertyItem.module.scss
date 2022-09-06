@@ -1,0 +1,364 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+@mixin property-item-main-card() {
+  box-shadow: $shadow-small;
+  border-radius: $border-radius-main;
+  border: 1px solid $color-border;
+  display: flex;
+  position: relative;
+  margin-bottom: 1rem;
+
+  &:hover {
+    box-shadow: $shadow-regular;
+  }
+
+  .property-item__favorite {
+    color: $color-main-lighter;
+    position: absolute;
+    right: 1rem;
+    top: 5rem;
+
+    svg {
+      font-size: 2rem;
+    }
+
+    &.active, &:hover {
+      color: $color-main;
+    }
+  }
+}
+
+.property-item-list {
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+
+  a {
+    @include property-item-main-card();
+    flex-direction: row;
+    overflow: hidden;
+
+    .property-item-section-image {
+      width: 50%;
+
+      @include mobileBreakpoint {
+        min-width: 50%;
+      }
+
+      .property-item-profile {
+        position: absolute;
+        z-index: 2;
+        right: 0.25rem;
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+
+        .property-agent-infos-agent-name {
+          color: black;
+          text-transform: capitalize;
+        }
+      }
+
+      .property-item-image {
+        .property-item-image-headband {
+          position: absolute;
+          border-bottom: 1.5px inset $color-border;
+          width: 40%;
+          right: 5%;
+          top: 60px;
+        }
+
+        .property-item-image-main {
+          height: 20rem;
+          width: 100%;
+
+          @include mobileBreakpoint {
+            height: 23rem;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius-main 0px 0px $border-radius-main;
+            object-fit: cover;
+          }
+
+          span {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            padding-top: 9rem;
+          }
+        }
+      }
+    }
+
+    .property-item-info {
+      padding: 0.5rem;
+      margin-top: 65px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50%;
+
+      .property-item-info-title,
+      .property-item-info-details {
+        max-width: 90%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
+        @include mobileBreakpoint {
+          max-width: 98%;
+        }
+      }
+
+      .property-item-info-title {
+        font-size: 17px;
+      }
+
+      .property-item-info-action {
+        display: inline-flex;
+
+        @include mobileBreakpoint {
+          flex-wrap: wrap;
+        }
+
+        .property-item-info-action-content {
+          margin-right: 12px;
+          max-height: 3rem;
+
+          > * {
+            box-sizing: border-box;
+            min-height: 3rem;
+            width: 7.5rem;
+          }
+
+          @include mobileBreakpoint {
+            width: 100%;
+            margin-bottom: 0.2rem;
+          }
+
+          @include tabletBreakpoint {
+            display: inline-flex;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+}
+
+.property-item-grid {
+  @include property-item-main-card();
+  flex-direction: column;
+  width: 32%;
+  overflow: hidden;
+  cursor: pointer;
+
+  @include tabletBreakpoint {
+    width: 49%;
+  }
+
+  @include mobileBreakpoint {
+    width: 100%;
+  }
+
+  a {
+    .property-item-section-image {
+      .property-item-profile {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .property-agent-infos-agent-name {
+          text-transform: capitalize;
+        }
+      }
+
+      .property-item-image {
+        .property-item-image-headband {
+          z-index: 1;
+          position: absolute;
+          background-color: $color-dark-low-opacity;
+          width: 100%;
+          height: 50px;
+          border-radius: $border-radius-main $border-radius-main 0px 0px;
+        }
+
+        .property-item-image-main {
+          height: 14rem;
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius-main $border-radius-main 0px 0px;
+            object-fit: cover;
+          }
+
+          span {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            padding-top: 6rem;
+          }
+        }
+      }
+    }
+
+    .property-item-info {
+      padding: 0.5rem;
+      width: 100%;
+      height: 15rem;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      flex-direction: column;
+      box-sizing: border-box;
+      
+      @include desktopBreakpoint {
+        height: 11rem;
+      }
+
+      .property-item-info-title {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 17px;
+      }
+
+      .property-item-info-action {
+        width: 100%;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        margin-top: 8px;
+
+        .property-item-info-action-content {
+          margin-right: 12px;
+          margin-bottom: 0;
+          max-height: 3rem;
+
+          > * {
+            box-sizing: border-box;
+            height: 2.5rem;
+            width: 6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.property-item-card {
+  @include property-item-main-card();
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+
+  a {
+    .property-item-section-image {
+      .property-item-profile {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .property-agent-infos-agent-name {
+          text-transform: capitalize;
+        }
+      }
+
+      .property-item-image {
+        .property-item-image-headband {
+          z-index: 1;
+          position: absolute;
+          background-color: $color-dark-low-opacity;
+          width: 100%;
+          height: 50px;
+          border-radius: $border-radius-main $border-radius-main 0px 0px;
+        }
+
+        .property-item-image-main {
+          height: 30rem;
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius-main $border-radius-main 0px 0px;
+            object-fit: cover;
+          }
+
+          span {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            padding-top: 14rem;
+          }
+        }
+      }
+    }
+
+    .property-item-info {
+      padding: 1.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 120px;
+
+      @include mobileBreakpoint {
+        height: 135px;
+        flex-wrap: nowrap;
+      }
+
+      .property-item-info-title {
+        width: 85%;
+        font-size: 17px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
+        @include tabletBreakpoint {
+          width: 77%;
+        }
+
+        @include mobileBreakpoint {
+          width: 100%;
+        }
+      }
+
+      .property-item-info-action {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+
+        @include mobileBreakpoint {
+          width: 100%;
+          align-self: flex-start;
+          flex-direction: row;
+        }
+
+        .property-item-info-action-content {
+          margin-bottom: 0.5rem;
+
+          @include mobileBreakpoint {
+            margin-bottom: 0;
+            margin-right: 0.5rem;
+          }
+
+          > * {
+            box-sizing: border-box;
+            height: 3rem;
+            width: 7.5rem;
+          }
+        }
+      }
+    }
+  }
+}

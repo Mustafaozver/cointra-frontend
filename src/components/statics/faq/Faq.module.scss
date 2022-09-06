@@ -1,0 +1,37 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.statics-faq {
+
+  .statics-faq__title {
+    text-align: center;
+  }
+
+  .statics-faq__content {
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+
+    .statics-faq__content-footer {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 1rem;
+
+      .statics-faq__content-footer__link {
+        color: $color-main;
+      }
+    }
+
+    .statics-faq__content-item {
+      margin: 2rem 0;
+
+      .statics-faq__content-question {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .statics-faq__content-answer {
+        font-size: 13px;
+        white-space: break-spaces;
+      }
+    }
+  }
+}

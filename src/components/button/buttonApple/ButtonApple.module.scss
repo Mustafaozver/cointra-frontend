@@ -1,0 +1,47 @@
+$apple-color: #7D7D7D;
+
+.apple-login-button {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: $apple-color;
+  color: white;
+  border: solid 1px white;
+  border-radius: 5px;
+  transition: background-color .218s, border-color .218s, box-shadow .218s;
+  cursor: pointer;
+
+  &:hover {
+    -webkit-box-shadow: 0 0 3px 3px rgba(183, 183, 183, 0.3);
+    box-shadow: 0 0 3px 3px rgba(183, 183, 183, 0.3);
+  }
+
+  &.apple-login-button__disabled {
+    cursor: not-allowed;
+    background-color: white;
+    color: $apple-color;
+    border: solid 1px $apple-color;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .apple-login-button__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .apple-login-button__icon {
+    margin: 0 10px;
+
+    svg{
+      font-size: 2rem;
+    }
+  }
+
+  .apple-login-button__text {
+    letter-spacing: .21px;
+    font-weight: 500;
+  }
+}

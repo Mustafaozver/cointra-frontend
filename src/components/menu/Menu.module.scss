@@ -1,0 +1,204 @@
+@import "../../mypzkit/components/mypz.scss";
+
+@mixin activeLink {
+    background-color: #f0f0f09c;
+    border-radius: 30px;
+}
+
+.zeekeez-menu {
+    .link-item__child-group {
+        transform: translate(-0.5rem, 0.3rem);
+        padding: 1rem;
+        position: absolute;
+        background-color: white;
+        font-size: 14px;
+        display: none;
+        box-shadow: $shadow-small;
+    }
+
+    .link-item__child {
+        padding: 0.5rem;
+
+        &:hover {
+            @include activeLink;
+        }
+    }
+
+    .zeekeez-menu__mobile {
+        background-color: transparent;
+        padding: 0.5rem 0;
+        box-shadow: $shadow-regular;
+
+        @include desktopBreakpoint {
+            display: none;
+        }
+    }
+
+    .zeekeez-menu__web {
+        background-color: transparent;
+        padding-top: 0.5rem;
+        box-shadow: $shadow-regular;
+
+        @include mobileBreakpoint {
+            display: none;
+        }
+
+        @include tabletBreakpoint {
+            display: none;
+        }
+
+        .zeekeez-menu__web-container {
+            display: flex;
+            justify-content: space-between;
+
+            .menu-links-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .link-item {
+                    cursor: pointer;
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding: 5px 10px;
+                    color: black;
+
+                    &.active,
+                    &:hover {
+                        @include activeLink;
+                    }
+
+                    &:hover .link-item__child-group {
+                        display: block;
+                    }
+                }
+            }
+
+            .web-menu-logo {
+                width: 12rem;
+            }
+        }
+    }
+
+    .menu-breadcrumbs {
+        margin-left: 12px;
+        margin-top: -0.5rem;
+    }
+}
+
+.app-bar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+
+    .menu-icon {
+        font-size: 2rem;
+        color: $color-main;
+    }
+
+    .app-bar-logo {
+        width: 12rem;
+    }
+}
+
+.mobile-menu-drawer {
+    @include desktopBreakpoint {
+        display: none;
+    }
+
+    .menu-drawer {
+        background-color: $color-main;
+        color: white;
+
+        .link-item {
+            margin: 0.25rem 1rem;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            padding: 5px 10px;
+            display: inline-block;
+        }
+
+        .link-item__child {
+            position: relative;
+            margin: 0.25rem 1rem;
+        }
+
+        .menu-links-container {
+            display: flex;
+            flex-direction: column;
+            margin: 0.5rem 0;
+        }
+
+        .menu-breadcrumbs {
+            @include mobileBreakpoint {
+                display: none;
+            }
+
+            @include tabletBreakpoint {
+                display: none;
+            }
+        }
+    }
+}
+
+.menu-login-container {
+    margin-top: 0.5rem;
+    display: flex;
+
+    .menu-login__button {
+        cursor: pointer;
+        border-radius: 50%;
+        height: 1.5rem;
+        width: 1.5rem;
+        border: solid 1px $color-dark-text;
+        color: $color-dark-text;
+        padding: 0.2rem;
+        margin-left: 0.5rem;
+
+        &:hover {
+            border: solid 1px $color-main;
+            color: $color-main;
+        }
+    }
+
+    .menu-login__block-auth-user {
+        display: flex;
+
+        .menu-login__block-auth-user-dropdown {
+            min-width: 20rem;
+        }
+    }
+}
+
+.menu-profile-popover {
+    display: flex;
+    flex-direction: column;
+    min-width: 10rem;
+    padding: 0.5rem 1rem;
+
+    .menu-profile-popover__header {
+        text-align: center;
+        border-bottom: solid 1px $color-shadow;
+        padding: 0.5rem 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .menu-profile-popover__link {
+        padding: 0.5rem 0;
+        transition: transform 200ms ease;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-main;
+            transform: translate3d(0.5rem, 0, 0);
+        }
+    }
+
+    .menu-profile-popover__logout {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}

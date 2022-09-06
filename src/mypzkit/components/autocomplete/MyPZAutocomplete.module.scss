@@ -1,0 +1,90 @@
+@import "../mypz.scss";
+
+.mypz-autocomplete {
+  width: 100%;
+
+  .mypz-autocomplete__input-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    &.mypz-autocomplete__input-container-grouped {
+      flex-wrap: nowrap;
+    }
+
+    .mypz-autocomplete__input {
+      display: flex;
+      align-items: center;
+      flex-shrink: 1;
+      flex-grow: 1;
+      margin-left: 0.2rem;
+      max-height: 1.5rem;
+    }
+
+    input {
+      border: none;
+      width: 100%;
+      margin-left: 0.2rem;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .mypz-autocomplete__value {
+    border: solid 1px grey;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+    border-radius: 0.2rem;
+    margin: 0.1rem;
+    white-space: nowrap;
+  }
+
+  .mypz-autocomplete__value-close {
+    margin-left: 0.2rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.2rem;
+    &:hover {
+      cursor: pointer;
+      background-color: grey;
+      color: white;
+    }
+  }
+
+  .mypz-autocomplete__options {
+    min-width: 10rem;
+    max-height: calc(50% - 2rem);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow: auto;
+    min-height: 10rem;
+    background-color: white;
+    z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px,
+      rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+    border-radius: 4px;
+
+    .mypz-autocomplete__option {
+      display: block;
+      width: 100%;
+      border: none;
+      padding: 0.8rem;
+      background-color: transparent;
+      text-align: start;
+
+      &:hover {
+        background-color: $color-main;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    .mypz-autocomplete__option-not-found {
+      padding: 1rem;
+      color: grey;
+    }
+  }
+}

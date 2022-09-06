@@ -1,0 +1,14 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.home-layout {
+  display: flex;
+  flex-direction: column;
+
+  .home-layout__menu-filter {
+    height: 100%;
+    background-image: url('../../../assets/images/homev2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

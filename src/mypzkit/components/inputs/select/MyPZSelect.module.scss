@@ -1,0 +1,29 @@
+@import '../../mypz.scss';
+
+.mypz-select {
+
+  .mypz-select__label {
+    font-weight: bold;
+    color: $color-third;
+  }
+  
+  .mypz-select__main {
+    width: 100%;
+    font-size: 13px;
+
+    &::before {
+      border-color: $color-border;
+    }
+
+    &:hover:not(.Mui-disabled) {
+
+      &:before {
+        border-bottom: 1px solid $color-border;
+      }
+    }
+
+    > {
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../../../mypzkit/components/mypz.scss";
+
+.concierge-service__hire {
+
+  .concierge-service__hire-items {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    @include desktopBreakpoint {
+      flex-wrap: nowrap;
+    }
+
+    @include tabletBreakpoint {
+
+    }
+
+    .concierge-service__hire-item {
+      width: 24%;
+
+      @include tabletBreakpoint {
+        width: 49%;
+      }
+
+      @include mobileBreakpoint {
+        width: 100%;
+      }
+    }
+  }
+}

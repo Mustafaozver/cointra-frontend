@@ -1,0 +1,73 @@
+@import '../mypz.scss';
+
+.mypz-pagination {
+  .mypz-pagination__button, .mypz-pagination__button-active, .mypz-pagination__separator {
+    min-width: 2.5rem;
+
+    @include mobileBreakpoint {
+      min-width: 1rem;
+    }
+  }
+
+  .mypz-pagination__button {
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 0.5rem;
+    background-color: white;
+    color: black;
+    border: solid 1px $color-border;
+    border-radius: 6px;
+    margin: 0 3px;
+
+    &:not([disabled]):hover {
+      cursor: pointer;
+      background-color: black;
+      color: white;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    .mypz-pagination__button-text {
+      min-width: 4rem;
+      display: inline-block;
+
+      @include mobileBreakpoint {
+        display: none;
+      }
+
+      @include tabletBreakpoint {
+        display: none;
+      }
+    }
+  }
+
+  .mypz-pagination__button-active {
+    padding: 0.5rem;
+    background-color: black;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: white;
+    border: solid 1px $color-border;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin: 0 0.1rem;
+  }
+
+  .mypz-pagination__button-icon {
+    font-size: inherit;
+    vertical-align: text-bottom;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  .mypz-pagination__separator {
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.1rem;
+  }
+}

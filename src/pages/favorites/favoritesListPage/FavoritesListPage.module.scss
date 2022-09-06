@@ -1,0 +1,83 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.properties-list-page {
+  .properties-list-page-filters {
+    margin: 0.5rem 0 0 0;
+  }
+
+  .properties-list-page-summary {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include mobileBreakpoint {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .properties-list-page-title__none {
+      font-size: 2rem;
+      align-self: center;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      line-height: 10rem;
+    }
+
+    .properties-list-page-title {
+      font-size: 1rem;
+      align-self: center;
+      margin: 0.5rem 0;
+
+      @include mobileBreakpoint {
+        align-self: flex-start;
+        width: 100%;
+      }
+    }
+
+    .properties-list-page-summary-right {
+      display: flex;
+      flex-wrap: wrap;
+      
+      @include mobileBreakpoint {
+        justify-content: space-between;
+      }
+
+      .property-view-selector {
+        margin-top: 2px;
+      }
+    }
+  }
+
+  .properties-list-page-container {
+    &.view-list,
+    &.view-card {
+      display: block;
+    }
+
+    &.view-grid {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .property-list-ghost-item {
+      height: 0;
+      width: 32%;
+
+      @include tabletBreakpoint {
+        width: 48%;
+      }
+
+      @include mobileBreakpoint {
+        width: 100%;
+      }
+    }
+  }
+
+  .properties-list-page-pagination {
+    text-align: center;
+    margin: 3rem auto 2rem;
+  }
+}

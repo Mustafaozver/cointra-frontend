@@ -1,0 +1,20 @@
+.about-us-interest {
+  display: flex;
+  flex-direction: column;
+  
+  .about-us-interest__item {
+    margin-bottom: 1rem;
+
+    .about-us-interest__item-title {
+      h4 {
+        font-weight: bold;
+      }
+    }
+
+    .about-us-interest__item-text {
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}

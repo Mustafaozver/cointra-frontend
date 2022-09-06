@@ -1,0 +1,80 @@
+@import "../mypz.scss";
+
+.mypz-gallery {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .mypz-gallery__main-preview-container {
+    width: 100%;
+    height: 83%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mypz-gallery__main-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+    @include desktopBreakpoint {
+      width: 70%;
+    }
+  }
+
+  .mypz-gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .mypz-gallery__preview-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mobileBreakpoint {
+      display: none;
+    }
+
+    @include tabletBreakpoint {
+      display: none;
+    }
+
+    .mypz-gallery__preview-item {
+      height: 32%;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      cursor: pointer;
+    }
+  }
+  
+  .mypz-gallery__nav-container {
+    width: 100%;
+    height: 15%;
+  }
+
+  .mypz-gallery__nav-img {
+    width: 90%;
+    height: 100%;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+  }
+
+  .mypz-gallery__nav-img-active {
+    border: solid 2px $color-main;
+    box-sizing: border-box;
+  }
+}

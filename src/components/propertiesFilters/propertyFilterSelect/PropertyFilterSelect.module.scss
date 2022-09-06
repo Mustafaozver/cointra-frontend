@@ -1,0 +1,21 @@
+.property-filter-select {
+  position: relative;
+
+  .property-filter-select-opener {
+    background-color: white;
+    padding: 0.4rem 0.4rem 0.4rem 0.7rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .property-filter-select-opener-name {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+  }
+
+}

@@ -1,0 +1,39 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.login-popup {
+  padding: 1rem;
+  min-width: 30vw;
+  
+  .login-popup__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-popup__title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .login-popup__separator {
+    border-bottom: solid 1px $color-border;
+    color: grey;
+    margin: 1rem 0;
+    height: 0.5rem;
+    text-align: center;
+
+    span {
+      background-color: white;
+      padding: 0.5rem;
+    }
+  }
+
+  .login-popup__field {
+    margin: 0.5rem 0;
+  }
+
+  .login-popup__forgot-password {
+    text-align: right;
+  }
+}

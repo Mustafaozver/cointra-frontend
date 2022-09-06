@@ -1,0 +1,42 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.input-text-area {
+  margin: 0.5rem 0;
+
+  .input-text-area__label {
+    font-weight: bold;
+    color: $color-third;
+  }
+
+  .input-text-area__alert {
+    font-size: 9px;
+    color: $color-main;
+    visibility: hidden;
+  }
+
+  .mypz-text-field-area {
+    textarea {
+      width: 100%;
+
+      &:focus {
+        border-color: $color-main;
+      }
+    }
+  }
+
+  &.show-error {
+    .input-text-area__alert {
+      visibility: visible;
+    }
+
+    .input-text-area__label {
+      color: $color-main;
+    }
+
+    .mypz-text-field-area {
+      textarea {
+        border-color: $color-main;
+      }
+    }
+  }
+}

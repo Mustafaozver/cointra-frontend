@@ -1,0 +1,70 @@
+@import "../../mypz";
+
+.mypz-button {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+
+    button {
+        background-color: $color-main;
+        color: white;
+        font-weight: bold;
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        border: 1px solid $color-main;
+        border-radius: 8px;
+        padding: 8px 20px;
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+            color: $color-main;
+        }
+
+        &.mypz-button__style-white {
+            border: 1px solid white;
+            background-color: white;
+            color: black;
+            &:hover {
+                background-color: #707070;
+                color: #E3E3E3;
+            }
+        }
+
+        &.mypz-button__style-grey {
+            background-color: #707070;
+            border: 1px solid white;
+            color: white;
+            &:hover {
+                background-color: white;
+                border: 1px solid #707070;
+                color: #707070;
+            }
+        }
+
+        &.mypz-button__style-black {
+            background-color: black;
+            border: 1px solid white;
+            color: white;
+            &:hover {
+                background-color: white;
+                border: 1px solid #707070;
+                color: #707070;
+            }
+        }
+
+        &:disabled {
+            background-color: grey;
+            opacity: 0.5;
+            cursor: auto;
+            border: 1px solid grey;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+}

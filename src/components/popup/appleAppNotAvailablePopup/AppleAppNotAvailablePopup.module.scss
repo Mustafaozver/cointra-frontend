@@ -1,0 +1,12 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.apple-app-not-available-popup {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+
+  .apple-app-not-available-popup__button {
+    margin-top: 2rem;
+  }
+}

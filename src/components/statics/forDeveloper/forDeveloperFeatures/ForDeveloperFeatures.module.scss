@@ -1,0 +1,49 @@
+@import "../../../../mypzkit/components/mypz.scss";
+
+.page-for-developer__features-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  
+  @include desktopBreakpoint {
+    flex-wrap: nowrap;
+  }
+
+  .page-for-developer__features-item__image {
+    width: 100%;
+    
+    @include desktopBreakpoint {
+      width: 49%;
+    }
+
+    @include mobileBreakpoint {
+      order: 2;
+    }
+
+    @include tabletBreakpoint {
+      order: 2;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .page-for-developer__features-item__text {
+    align-self: center;
+    width: 100%;
+    
+    @include desktopBreakpoint {
+      width: 49%;
+    }
+
+    @include mobileBreakpoint {
+      order: 1;
+    }
+
+    @include tabletBreakpoint {
+      order: 1;
+    }
+  }
+}

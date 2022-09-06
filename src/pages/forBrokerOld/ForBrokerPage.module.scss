@@ -1,0 +1,125 @@
+@import "../../mypzkit/components/mypz.scss";
+
+.page-for-broker {
+
+  .page-for-broker__introduction {
+
+    text-align: center;
+
+    .page-for-broker__introduction_button-get {
+      margin: auto;
+      width: 100%;
+
+      @include desktopBreakpoint {
+        width: 30%;
+      }
+    }
+
+    .page-for-broker__introduction-image {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .page-for-broker__exclusivity {
+    margin-top:  1.5rem;
+    text-align: center;
+
+    .page-for-broker__exclusivity__items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      
+      @include desktopBreakpoint {
+        flex-wrap: nowrap;
+      }
+
+      .page-for-broker__exclusivity__item {
+        width: 100%;
+        
+        @include desktopBreakpoint {
+          width: 49%;
+        }
+
+        .page-for-broker__exclusivity__item-text {
+          span {
+            font-weight: bold;
+          }
+
+          .page-for-broker__exclusivity__item-text__contact {
+            color: $color-main;
+          }
+        }
+      }
+    }
+  }
+
+  .page-for-broker__features {
+    h2 {
+      text-align: center;
+    }
+    margin: 2.5rem;
+  }
+
+  .page-for-broker__work {
+    text-align: center;
+    
+    .page-for-broker__work__item {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        margin: auto;
+
+        @include mobileBreakpoint {
+          width: 100%;
+          object-fit: cover;
+        }
+
+        @include tabletBreakpoint {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 16px;
+        margin: 1rem auto;
+      }
+    }
+  }
+
+  .page-for-broker__benefits {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-for-broker__plan {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    .page-for-broker__plan-button {
+      margin: 1.5rem auto;
+      width: 100%;
+
+      @include desktopBreakpoint {
+        width: 40%;
+      }
+    }
+  }
+
+  .page-for-broker__pricing {
+    text-align: center;
+
+    .page-for-broker__pricing-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}

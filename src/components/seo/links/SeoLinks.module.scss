@@ -1,0 +1,35 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.seo-links {
+  max-height: 25rem;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include tabletBreakpoint {
+    max-height: 40rem;
+  }
+
+  @include mobileBreakpoint {
+    max-height: 100%;
+    text-align: center;
+  }
+
+  .seo-links_item {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+
+    .seo-links_item_title {
+      color: $color-title;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      font-size: 13px;
+    }
+
+    .seo-links_item_links {
+      line-height: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import '../mypz.scss';
+
+.mypz-drawer {
+  @include desktopBreakpoint {
+      display: none;
+  }
+}

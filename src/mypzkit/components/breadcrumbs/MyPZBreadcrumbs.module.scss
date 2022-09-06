@@ -1,0 +1,13 @@
+@import "../mypz";
+
+.mypz-breadcrumbs {
+    color: $color-dark-text;
+
+    .MuiBreadcrumbs-separator {
+        margin: 0;
+    }
+
+    .MuiBreadcrumbs-li {
+        text-transform: capitalize;
+    }
+}

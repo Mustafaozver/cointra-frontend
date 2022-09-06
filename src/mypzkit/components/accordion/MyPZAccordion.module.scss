@@ -1,0 +1,18 @@
+@import '../mypz.scss';
+
+.mypz-accordion {
+  > div {
+    box-shadow: none;
+    border-radius: 0.8rem;
+    border: 1px $color-border solid;
+  }
+
+  .mypz-accordion__title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .mypz-accordion__details {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,224 @@
+@import "../../mypzkit/components/mypz.scss";
+
+.home-page {
+
+    .home-page_section-header {
+        height: 100%;
+        background-image: url('../../assets/images/homev2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 1rem;
+    }
+
+    .home-page__header {
+        text-align: center;
+        min-height: 75vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1, h3 {
+            color: $color-title;
+        }
+
+        h3 {
+            font-weight: lighter;
+        }
+    }
+
+    .home-page__header-filter {
+        align-self: center;
+        text-align: start;
+        width: 100%;
+        margin-top: 2rem;
+
+        @include desktopBreakpoint {
+            width: 72%;
+        }
+    }
+
+    .home-page__title {
+        text-align: center;
+    }
+
+    .home-page__baseline {
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .home-page__baseline-2 {
+        font-weight: normal;
+    }
+
+    .home-page__suggested-properties {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    .home-page__suggested-ghost-item {
+        height: 0;
+        width: 100%;
+
+        @include tabletBreakpoint {
+            width: 30%;
+        }
+    }
+
+    .home-page__description {
+        text-align: center;
+        line-height: 1.4rem;
+        margin: 2rem 5rem;
+
+        @include tabletBreakpoint {
+            margin: 2rem 0;
+        }
+
+        @include mobileBreakpoint {
+            margin: 2rem 0;
+        }
+    }
+
+    .home-page__section {
+        padding: 2rem 0;
+    }
+
+    .home-page__section-odd {
+        background-color: #f2f2f2;
+    }
+
+    .home-page__section-title, .home-page__section-title-center {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+        text-align: left;
+        margin: 1rem 0;
+    }
+
+    .home-page__section-title-center {
+        text-align: center;
+    }
+
+    .home-page__section-sub-title {
+        margin: 2rem 0;
+        font-size: 1.25rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .home-page__how-it-work-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 1rem 0;
+    }
+
+    .home-page__how-it-work-item {
+        display: flex;
+        padding-right: 3rem;
+        box-sizing: border-box;
+        margin-bottom: 0.5rem;
+        width: 30%;
+
+        @include tabletBreakpoint {
+            width: 50%;
+        }
+
+        @include mobileBreakpoint {
+            width: 100%;
+        }
+    }
+
+    .home-page__how-it-work-item-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5rem;
+        }
+    }
+
+    .home-page__how-it-work-item-title {
+        font-weight: bold;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .home-page__how-it-work-item-description {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    .home-page__how-it-work-button-container {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .home-page__how-it-work-button {
+        display: inline-block;
+    }
+
+    .home-page__why-zeekeez {
+        display: flex;
+
+        @include tabletBreakpoint {
+            flex-wrap: wrap;
+        }
+
+        @include mobileBreakpoint {
+            flex-wrap: wrap;
+        }
+    }
+
+    .home-page__why-zeekeez-img {
+        margin-right: 1rem;
+        width: 25rem;
+        height: 20rem;
+        flex-shrink: 0;
+        box-sizing: border-box;
+
+        @include tabletBreakpoint {
+            margin: auto;
+        }
+
+        @include mobileBreakpoint {
+            margin: auto;
+            width: 12rem;
+            height: 10rem;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .home-page__why-zeekeez-text {
+        margin-top: 1rem;
+        line-height: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .home-page__why-zeekeez-links {
+        margin: 0;
+
+        li {
+            list-style: disc;
+        }
+    }
+
+    .home-page__why-zeekeez-link-item {
+        margin-right: 0.2rem;
+        a {
+            font-size: 1rem;
+        }
+    }
+}

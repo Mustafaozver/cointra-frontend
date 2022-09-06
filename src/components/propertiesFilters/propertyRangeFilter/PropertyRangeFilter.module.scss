@@ -1,0 +1,77 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.property-range-filter {
+  .property-range-filter-opener-content {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+    align-items: flex-end;
+
+    > span {
+      flex-basis: 50%;
+      text-align: center;
+      flex-grow: 0;
+      flex-shrink: 0;
+
+      &.property-range-filter-opener-content-to {
+        flex-basis: 0;
+        font-size: 14px;
+        margin: 0 0.3rem;
+      }
+    }
+  }
+}
+
+.property-range-filter-content {
+  padding: 0.5rem;
+  display: flex;
+  box-sizing: border-box;
+
+  .property-range-filter-content-range {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50%;
+    max-width: 50%;
+
+    .property-range-filter-content-range-label {
+      font-weight: bold;
+      margin-bottom: 0.2rem;
+    }
+
+    .property-range-filter-content-range-input {
+      padding: 0.5rem;
+      box-sizing: border-box;
+      border: solid 1px $color-border;
+      margin-bottom: 0.5rem;
+      font-size: 14px;
+      width: 100%;
+      min-width: 100%;
+    }
+
+    .property-range-filter-content-range-button-group {
+      width: 100%;
+      height: 20rem;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .property-range-filter-content-range-button {
+      width: 100%;
+      background-color: transparent;
+      border: solid 1px $color-border;
+      padding: 0.8rem 0;
+      font-size: 14px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $color-border;
+      }
+
+      &.active {
+        background-color: $color-main-lighter;
+      }
+    }
+  }
+}

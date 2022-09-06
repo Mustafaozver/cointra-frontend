@@ -1,0 +1,69 @@
+@import "../../mypzkit/components/mypz.scss";
+
+.page-for-developer {
+
+  .page-for-developer__introduction {
+
+    text-align: center;
+
+    .page-for-developer__introduction_button-get {
+      margin: auto;
+      width: 100%;
+
+      @include desktopBreakpoint {
+        width: 30%;
+      }
+    }
+
+    .page-for-developer__introduction-image {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .page-for-developer__features {
+    margin: 2.5rem;
+  }
+
+  .page-for-developer__pricing {
+    text-align: center;
+
+    .page-for-developer__pricing__advantage {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-weight: bold;
+      }
+
+      .page-for-developer__pricing__advantage-button {
+        width: 100%;
+        margin: 2rem auto;
+
+        @include desktopBreakpoint {
+          width: 40%;
+        }
+      }
+    }
+
+    .page-for-developer__pricing__services {
+
+      .page-for-developer__pricing__services-button {
+        width: 100%;
+        margin: 2rem auto;
+
+        @include desktopBreakpoint {
+          width: 40%;
+        }
+      }
+    }
+
+    .page-for-developer__pricing-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}

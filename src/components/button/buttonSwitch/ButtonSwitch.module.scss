@@ -1,0 +1,25 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.button-switch {
+  color: #E3E3E3;
+  background-color: $color-filter-background;
+  display: inline-block;
+  padding: 4px;
+  border-radius: 5rem;
+  margin-bottom: 0.5rem;
+
+  >button {
+    border: 0;
+    border-radius: 5rem;
+    color: #E3E3E3;
+    font-size: 14px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0.5rem 2.8rem;
+
+    &.active {
+      color: $color-main;
+      background-color: white;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import '../mypz.scss';
+
+.mypz-table {
+  width: 100%;
+  line-height: 2rem;
+  background: white;
+  border-radius: 0.2rem;
+  box-shadow: $shadow-small;
+  border-collapse: collapse;
+
+  th {
+    padding: 0 1rem;
+    border-bottom: solid 1px $color-border;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: bold;
+  }
+
+  td {
+    padding: 0 1rem;
+    border-bottom: solid 1px $color-border;
+    vertical-align: middle;
+  }
+}

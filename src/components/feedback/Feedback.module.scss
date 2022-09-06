@@ -1,0 +1,16 @@
+@import "../../mypzkit/components/mypz.scss";
+
+.feedback-component {
+  position: fixed;
+  right: 0;
+  top: 48%;
+  background-color: $color-main;
+  padding: 1rem 0.4rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: white;
+  font-size: 14px;
+  border-radius: 0.3rem 0 0 0.3rem;
+  cursor: pointer;
+  z-index: 3;
+}

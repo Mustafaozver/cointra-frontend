@@ -1,0 +1,27 @@
+@import "../../../../mypzkit/components/mypz.scss";
+
+.property-features-part {
+  display: flex;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  .property-feature-icon {
+    height: 18px;
+  }
+
+  .property-features-part-text {
+    vertical-align: top;
+    margin: 0 1rem 0 0.2rem;
+
+    .property-features-part-text__unit {
+      font-size: 11px;
+    }
+  }
+
+  .property-features-part-separator {
+    color: $color-third-light;
+    margin-right: 1rem;
+  }
+}

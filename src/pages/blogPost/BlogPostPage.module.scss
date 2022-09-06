@@ -1,0 +1,25 @@
+.page-blog-post {
+  .page-blog-post__header {
+    width: 100%;
+    height: 25rem;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .page-blog-post__container {
+    margin: 1rem 0;
+
+    li {
+      list-style: disc;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

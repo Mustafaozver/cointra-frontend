@@ -1,0 +1,41 @@
+@import "../../mypzkit/components/mypz.scss";
+
+.page-loyalty-program {
+
+  .page-loyalty-program__content {
+    text-align: center;
+
+    .page-loyalty-program__content__image {
+      width: 100%;
+      margin: auto;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .page-loyalty-program__content__form {
+      margin: 1rem auto;
+      width: 25rem;
+      border: 1px solid $color-border;
+      border-radius: 0.8rem;
+      padding: 1rem 1.5rem;
+      font-size: 13px;
+      text-align: start;
+      box-sizing: border-box;
+
+      @include tabletBreakpoint() {
+        width: 60%;
+      }
+
+      @include mobileBreakpoint() {
+        width: 100%;
+      }
+
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+}

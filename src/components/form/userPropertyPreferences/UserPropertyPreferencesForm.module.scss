@@ -1,0 +1,100 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.user-property-preferences-form {
+  .user-property-preferences-form__field-container {
+    background-color: $color-filter-background;
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .user-property-preferences-form__switch {
+    text-align: center;
+  }
+
+  .user-property-preferences-form__field-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .user-property-preferences-form__field {
+    width: 100%;
+  }
+
+  .user-property-preferences-form__label {
+    color: white;
+    margin: 0.3rem 0 0.3rem 0;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .user-property-preferences-form__type {
+    width: 60%;
+
+    @include mobileBreakpoint {
+      width: 100%;
+    }
+  }
+
+  .user-property-preferences-form__price {
+    width: 35%;
+
+    @include mobileBreakpoint {
+      width: 100%;
+    }
+  }
+
+  .user-property-preferences-form__area-sqft {
+    width: 35%;
+
+    @include mobileBreakpoint {
+      width: 100%;
+    }
+  }
+
+  .user-property-preferences-form__bedrooms {
+    width: 35%;
+
+    @include mobileBreakpoint {
+      width: 100%;
+    }
+  }
+
+  .user-property-preferences-form__locations {
+    width: 60%;
+
+    @include mobileBreakpoint {
+      width: 100%;
+    }
+  }
+
+  .user-property-preferences-form__is-data-shared {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .user-property-preferences-form__radio {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  .user-property-preferences-form__tagline {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    text-align: center;
+
+    @include mobileBreakpoint {
+      font-size: 1rem;
+    }
+  }
+
+  .user-property-preferences-form__agree {
+    margin-top: 1rem;
+    color: $color-main;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../mypzkit/components/mypz.scss";
+
+.property-dynamic-filter {
+  text-align: center;
+  padding: 1rem;
+  border-radius: $border-radius-main;
+  border: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .property-dynamic-filter-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .property-dynamic-filter-items {
+    .property-dynamic-filter-item {
+      width: 100%;
+      margin-top: 0.5rem;
+      
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .property-dynamic-filter-button {
+    margin: auto;
+    margin-top: 0.5rem;
+    width: 50%;
+  }
+}

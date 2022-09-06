@@ -1,0 +1,59 @@
+@import "../../../../mypzkit/components/mypz.scss";
+
+.page-for-developer__pricing-item {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  border: 1px solid $color-border;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include desktopBreakpoint {
+    width: 32%;
+  }
+
+  .page-for-developer__pricing-item-body {
+
+    .page-for-developer__pricing-item__type {
+      font-size: 18px;
+    }
+
+    .page-for-developer__pricing-item__price {
+      margin: 2rem auto auto;
+
+      .__pricing-item__price__currency {
+        vertical-align: top;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .__pricing-item__price__value {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+    }
+
+    .page-for-developer__pricing-item__details {
+
+      .__pricing-item__details__value {
+        margin: 1rem auto;
+      }
+    }
+
+    .page-for-developer__pricing-item__features {
+
+      .__pricing-item__features__value {
+        text-align: start;
+      }
+    }
+  }
+
+  .page-for-developer__pricing-item-footer {
+    margin-top: 1.5rem;
+  }
+
+}

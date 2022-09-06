@@ -1,0 +1,31 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+
+  .form-register__alert {
+    margin-bottom: 1rem;
+  }
+
+  .form-register__input {
+    margin-bottom: 1rem;
+  }
+
+  .form-register__input-button {
+    margin-top: 0.5rem;
+  }
+
+  .form-register__input-checkbox {
+    margin-bottom: 0;
+  }
+
+  .form-register__checkbox-label {
+    font-size: 13px;
+
+    .form-register__checkbox-label__link {
+      color: $color-main;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import "../../../mypzkit/components/mypz.scss";
+
+.property-multi-checkbox__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+
+  .property-multi-checkbox__content-header {
+    display: inline-flex;
+    justify-content: space-between;
+
+    @include mobileBreakpoint {
+      width: 100%;
+    }
+
+    span {
+      cursor: pointer;
+      outline: none;
+      width: 100%;
+      border-bottom: 3px solid $color-third;
+      font-weight: bold;
+      text-align: center;
+      transition: border 0.8s;
+
+      &.active {
+        border-bottom: 3px solid $color-main;
+        color: $color-main;
+      }
+    }
+  }
+
+  .property-multi-checkbox__content-selection {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
+
+    @include mobileBreakpoint {
+      width: 100%;
+      display: flex;
+      flex-wrap: none;
+      flex-direction: column;
+    }
+
+    @include tabletBreakpoint {
+      width: 100%;
+      display: flex;
+      flex-wrap: none;
+      flex-direction: column;
+    }
+
+    .property-multi-checkbox__content-selection-checkbox {
+      width: 50%;
+
+      @include mobileBreakpoint {
+        width: 100%;
+      }
+
+      @include tabletBreakpoint {
+        width: 100%;
+      }
+    }
+  }
+}

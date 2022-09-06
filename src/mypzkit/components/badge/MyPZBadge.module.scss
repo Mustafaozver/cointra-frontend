@@ -1,0 +1,22 @@
+@import "../mypz.scss";
+
+.mypz-badge {
+  position: relative;
+
+  .mypz-badge__counter {
+    color: white;
+    position: absolute;
+    font-size: 0.75rem;
+    top: 0;
+    right: 0;
+    transform: scale(1) translate(50%, -50%);
+    transform-origin: 100% 0%;
+    background-color: $color-link;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

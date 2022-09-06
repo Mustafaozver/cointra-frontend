@@ -1,0 +1,37 @@
+@import "../../../../mypzkit/components/mypz.scss";
+
+.about-us-title {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include desktopBreakpoint {
+    flex-wrap: nowrap;
+  }
+
+  .about-us-title__text {
+    width: 100%;
+
+    @include desktopBreakpoint {
+      flex-wrap: 50%;
+    }
+    .about-us-title__text-description {
+        font-weight: bold;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .page-about-us__title__image {
+    width: 100%;
+
+    @include desktopBreakpoint {
+      flex-wrap: 50%;
+    }
+    img {
+      object-fit: cover;
+    }
+  }
+}
