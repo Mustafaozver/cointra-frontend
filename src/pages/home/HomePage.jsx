@@ -191,11 +191,38 @@ const HomePage = (props) => {
                   <ul className={styles['home-page__why-zeekeez-links']}>
                     <li>
                       <strong className={styles['home-page__why-zeekeez-link-item']}><MyPZLink to="/en/sale/properties-for-sale-in-dubai" linkType="simple">Properties for sale in Dubai</MyPZLink></strong>
-                      <span>and in the UAE : Apartments, Villas, Duplexes, Studios, 1 Bedroom, and more in Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Al Ain...</span>
+                      <span className={styles['home-page__why-zeekeez-link-item']}>and in the UAE : 
+                        <MyPZLink linkType="simple" to="/en/sale/properties-for-sale?locations=dubai&propertyTypes=APT&category=0&s=162">Apartments</MyPZLink>,
+                        <MyPZLink linkType="simple" to="/en/sale/properties-for-sale?locations=dubai&propertyTypes=VIL&category=0&s=271">Villas</MyPZLink>,
+                        <MyPZLink linkType="simple" to="/en/sale/properties-for-sale?locations=dubai&propertyTypes=DUP&category=0&s=271">Duplexes</MyPZLink>,
+                        <MyPZLink linkType="simple" to="/en/sale/properties-for-sale?locations=dubai&propertyTypes=APT&category=0&bedrooms=0&s=271">Studios</MyPZLink>,
+                        <MyPZLink linkType="simple" to="/en/sale/properties-for-sale?locations=dubai&propertyTypes=APT&category=0&bedrooms=1&s=271">1 Bedroom</MyPZLink>,
+                        <MyPZLink linkType="simple" to="/en/sale/properties-for-sale?locations=abu-dhabi&category=0&s=933">Abu Dhabi</MyPZLink>,
+                        <MyPZLink linkType="simple" to="/en/sale/properties-for-sale?locations=sharjah&category=0&s=933">Sharjah</MyPZLink>, Ajman,
+                        <MyPZLink linkType="simple" to="/en/sale/properties-for-sale?locations=ras-al-khaimah&category=0&s=933">Ras Al Khaimah</MyPZLink>,
+                      Al Ain...</span>
                     </li>
                     <li>
                       <strong className={styles['home-page__why-zeekeez-link-item']}><MyPZLink to="/en/rent/properties-for-rent-in-dubai" linkType="simple">Properties for rent in Dubai</MyPZLink></strong>
-                      <span>and in the UAE : Flats, Lofts, Apartments, Houses, Townhouses, Villas, 1 Bedroom, 3 Bedrooms, and more in Downtown Dubai, Palm Jumeirah, Dubai Marina, Mirdiff, Arabian Ranches, Burj Khalifa, Dubai Land, Dubai Creek, Sports City, International City...</span>
+                      <span className={styles['home-page__why-zeekeez-link-item']}>and in the UAE :
+                      Flats,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai&propertyTypes=LFT&category=0&s=175">Lofts</MyPZLink>,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai&propertyTypes=APT&category=0&s=175">Apartments</MyPZLink>, Houses,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai&propertyTypes=TWN&category=0&s=175">Townhouses</MyPZLink>,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai&propertyTypes=VIL&category=0&s=175">Villas</MyPZLink>,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai&propertyTypes=APT&category=0&bedrooms=1&s=175">1 Bedroom</MyPZLink>,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai&propertyTypes=APT&category=0&bedrooms=3&s=175">3 Bedrooms</MyPZLink>, and more in
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai-downtown-dubai&category=0&s=318">Downtown Dubai</MyPZLink>,
+						
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai-palm-jumeirah&category=0&s=318">Palm Jumeirah</MyPZLink>,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai-dubai-marina&category=0&s=318">Dubai Marina</MyPZLink>,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai-mirdif&category=0&s=318">Mirdif</MyPZLink>,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai-arabian-ranches&category=0&s=318">Arabian ranches</MyPZLink>,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai-downtown-dubai-burj-khalifa-area-burj-khalifa&category=0&s=318">Burj Khalifa</MyPZLink>,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai-dubai-land&category=0&s=318">Dubai Land</MyPZLink>,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai-dubai-sports-city&category=0&s=318">Sports City</MyPZLink>,
+                      <MyPZLink linkType="simple" to="/en/rent/properties-for-rent?locations=dubai-international-city&category=0&s=318">International City</MyPZLink>...
+                      </span>
                     </li>
                     <li>
                       <strong className={styles['home-page__why-zeekeez-link-item']}><MyPZLink to="/en/rent/luxury-properties-for-rent-in-uae" linkType="simple">Luxury Properties in Dubai</MyPZLink></strong>

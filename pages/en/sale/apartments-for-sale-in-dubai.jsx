@@ -29,6 +29,20 @@ export async function getServerSideProps(context) {
 
 export default (props) => {
   const { data, filters, initialFilters } = props;
+  const paginationLink = '/en/sale/apartments-for-sale-in-dubai?page=';
+  const NextLinksRenderer = () => {
+    const paginationLinknext = paginationLink + (data.pagination.page + 1);
+    if (data.pagination.page < data.pagination['page-count']) return (
+      <link rel="next" href={paginationLinknext} />
+    );
+    else return null;
+  };
+  const PrevLinksRenderer = () => {
+    const paginationLinkprev = paginationLink + (data.pagination.page - 1);
+    if(data.pagination.page > 1) return (
+      <link rel="prev" href={paginationLinkprev} />
+    );
+  };
 
   return (
     <>
@@ -36,6 +50,8 @@ export default (props) => {
         <title>Apartments for sale in Dubai | 7004 Apartments for sale in Dubai UAE| Zeekeez</title>
         <meta name="description" content="Luxury apartments for sale in Dubai. Fully furnished handover soon 1,2,3,4 bedroom apartments, penthouse, studio, duplex, villas. Kindly get in touch with us."/>
         <meta name="keywords" content="apartments for sale in Dubai silicon oasis, apartments for sale in Dubai, apartments for sale in Dubai hills estate" />
+        {PrevLinksRenderer()}
+        {NextLinksRenderer()}
       </Head>
       <FiltersProvider overrideFilters={filters}>
         <PropertiesListPage

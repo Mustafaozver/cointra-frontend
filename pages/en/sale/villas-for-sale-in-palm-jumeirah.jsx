@@ -29,12 +29,28 @@ export async function getServerSideProps(context) {
 
 export default (props) => {
   const { data, filters, initialFilters } = props;
+  const paginationLink = '/en/sale/villas-for-sale-in-palm-jumeirah?page=';
+  const NextLinksRenderer = () => {
+    const paginationLinknext = paginationLink + (data.pagination.page + 1);
+    if (data.pagination.page < data.pagination['page-count']) return (
+      <link rel="next" href={paginationLinknext} />
+    );
+    else return null;
+  };
+  const PrevLinksRenderer = () => {
+    const paginationLinkprev = paginationLink + (data.pagination.page - 1);
+    if(data.pagination.page > 1) return (
+      <link rel="prev" href={paginationLinkprev} />
+    );
+  };
 
   return (
     <>
       <Head>
         <title>Villas for Sale in Palm Jumeirah| zeekeez.com</title>
         <meta name="description" content="Villas for Sale in Palm Jumeirah Dubai UAE. Buy Sell Residential Properties in UAE : Villas, Houses, Homes, Townhouses, Beach views, Private pool…"/>
+        {PrevLinksRenderer()}
+        {NextLinksRenderer()}
       </Head>
       <FiltersProvider overrideFilters={filters}>
         <PropertiesListPage

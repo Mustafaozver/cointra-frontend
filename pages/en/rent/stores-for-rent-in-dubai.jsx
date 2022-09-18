@@ -29,6 +29,20 @@ export async function getServerSideProps(context) {
 
 export default (props) => {
   const { data, filters, initialFilters } = props;
+  const paginationLink = '/en/rent/stores-for-rent-in-dubai?page=';
+  const NextLinksRenderer = () => {
+    const paginationLinknext = paginationLink + (data.pagination.page + 1);
+    if (data.pagination.page < data.pagination['page-count']) return (
+      <link rel="next" href={paginationLinknext} />
+    );
+    else return null;
+  };
+  const PrevLinksRenderer = () => {
+    const paginationLinkprev = paginationLink + (data.pagination.page - 1);
+    if(data.pagination.page > 1) return (
+      <link rel="prev" href={paginationLinkprev} />
+    );
+  };
 
   return (
     <>
@@ -36,6 +50,8 @@ export default (props) => {
         <title>Studio for rent in Dubai monthly | 3129 Stores for rent in Dubai UAE |Zeekeez.com</title>
         <meta name="description" content="See Studio Apartments for rent in Dubai monthly with zeekeez.com browse from our 3129 properties. Well maintained, brand new, bright and spacious, close to metro."/>
         <meta name="keywords" content="properties for rent in Dubai, apartment to rent in Dubai marina, studio for rent in Dubai monthly, apartment to rent in Dubai marina" />
+        {PrevLinksRenderer()}
+        {NextLinksRenderer()}
       </Head>
       <FiltersProvider overrideFilters={filters}>
         <PropertiesListPage

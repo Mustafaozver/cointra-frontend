@@ -189,7 +189,7 @@ export default (props) => {
     initialFilters,
     page,
   } = props;
-  const paginationLink = 'https://www.zeekeez.com/en/rent/properties-for-rent?page=';
+  const paginationLink = '/en/rent/properties-for-rent?page=';
   const NextLinksRenderer = () => {
     const paginationLinknext = paginationLink + (data.pagination.page + 1);
     if (data.pagination.page < data.pagination['page-count']) return (

@@ -10,7 +10,6 @@ import LoginProvider from '../../../context/login/LoginContext';
 
 const MainLayout = (props) => {
   const { children } = props;
-
   return (
     <UserProvider>
       <LoginProvider>

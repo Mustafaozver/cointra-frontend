@@ -29,6 +29,20 @@ export async function getServerSideProps(context) {
 
 export default (props) => {
   const { data, filters, initialFilters } = props;
+  const paginationLink = '/en/sale/properties-for-sale?page=';
+  const NextLinksRenderer = () => {
+    const paginationLinknext = paginationLink + (data.pagination.page + 1);
+    if (data.pagination.page < data.pagination['page-count']) return (
+      <link rel="next" href={paginationLinknext} />
+    );
+    else return null;
+  };
+  const PrevLinksRenderer = () => {
+    const paginationLinkprev = paginationLink + (data.pagination.page - 1);
+    if(data.pagination.page > 1) return (
+      <link rel="prev" href={paginationLinkprev} />
+    );
+  };
 
   return (
     <>
@@ -36,6 +50,8 @@ export default (props) => {
         <title>Properties for sale in UAE -Apartments for sale in Dubai-Zeekeez	</title>
         <meta name="description" content="Find all luxury and affordable properties for sale in UAE. Browse and select a wide assortment of properties available to be purchased with photographs, floorplan and amenities on zeekeez.com." />
         <meta name="keywords" content="Properties for sale in UAE, apartments for sale in Dubai, commercial property for sale in Dubai" />
+        {PrevLinksRenderer()}
+        {NextLinksRenderer()}
       </Head>
       <FiltersProvider overrideFilters={filters}>
         <PropertiesListPage

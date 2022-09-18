@@ -12,6 +12,7 @@ import {
 } from '../../mypzkit';
 import InputTextArea from '../../components/inputs/inputTextArea/InputTextArea';
 import { contactUs } from '../../api/contacts/contactsApi';
+import NavBar from '../../components/navbar/navbar';
 
 const CareerPage = (props) => {
   const resetInputs = {
@@ -153,6 +154,10 @@ const CareerPage = (props) => {
 
   return (
     <MyPZContainer>
+      {NavBar({ Paths: [
+        { Path: 'Home', Url: '/' },
+        { Path: 'Career', Url: '/en/career' },
+      ] })}
       <div className={styles['page-career']}>
         <MyPZContainer className={styles['page-career__form']}>
           <h1>{mainTitle}</h1>

@@ -29,12 +29,28 @@ export async function getServerSideProps(context) {
 
 export default (props) => {
   const { data, filters, initialFilters } = props;
+  const paginationLink = '/en/rent/houses-for-rent-in-palm-jumeirah?page=';
+  const NextLinksRenderer = () => {
+    const paginationLinknext = paginationLink + (data.pagination.page + 1);
+    if (data.pagination.page < data.pagination['page-count']) return (
+      <link rel="next" href={paginationLinknext} />
+    );
+    else return null;
+  };
+  const PrevLinksRenderer = () => {
+    const paginationLinkprev = paginationLink + (data.pagination.page - 1);
+    if(data.pagination.page > 1) return (
+      <link rel="prev" href={paginationLinkprev} />
+    );
+  };
 
   return (
     <>
       <Head>
         <title>Houses for Rent in Palm Jumeirah| zeekeez.com</title>
         <meta name="description" content="Houses to Rent in Palm Jumeirah Dubai UAE. Rent Residential Properties in UAE : Villas, Houses, Homes, Townhouses, Beach views…"/>
+        {PrevLinksRenderer()}
+        {NextLinksRenderer()}
       </Head>
       <FiltersProvider overrideFilters={filters}>
         <PropertiesListPage

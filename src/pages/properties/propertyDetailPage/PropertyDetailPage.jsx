@@ -22,6 +22,7 @@ import {
   filtersToParams,
   stringifyParams,
 } from '../../../helpers/propertyFilterHelper';
+import NavBar from '../../../components/navbar/navbar';
 
 const PropertyDetailPage = (props) => {
   const {
@@ -199,10 +200,13 @@ const PropertyDetailPage = (props) => {
     setIsContactOpen(false);
     setContactData(null);
   };
-
   return (
     <div className={styles['property-detail-page']}>
       <MyPZContainer>
+        {NavBar({ Paths: [
+          { Path: 'Home', Url: '/' },
+          { Path: property.title, Url: '/en/properties/' + property.slug },
+        ] })}
         <ContactPopup
           isOpen={isContactOpen}
           onClose={onCloseContactPopup}

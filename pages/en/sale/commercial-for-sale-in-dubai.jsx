@@ -29,6 +29,20 @@ export async function getServerSideProps(context) {
 
 export default (props) => {
   const { data, filters, initialFilters } = props;
+  const paginationLink = '/en/sale/commercial-for-sale-in-dubai?page=';
+  const NextLinksRenderer = () => {
+    const paginationLinknext = paginationLink + (data.pagination.page + 1);
+    if (data.pagination.page < data.pagination['page-count']) return (
+      <link rel="next" href={paginationLinknext} />
+    );
+    else return null;
+  };
+  const PrevLinksRenderer = () => {
+    const paginationLinkprev = paginationLink + (data.pagination.page - 1);
+    if(data.pagination.page > 1) return (
+      <link rel="prev" href={paginationLinkprev} />
+    );
+  };
 
   return (
     <>
@@ -36,6 +50,8 @@ export default (props) => {
         <title>Cheapest Commercial property for sale in Dubai | Properties for sale in the UAE </title>
         <meta name="description" content="Check commercial properties for sale in Dubai UAE. Use our property finder portal zeekeez.com and select best office for your teams. Verified properties, brand new, best location, ready to use."/>
         <meta name="keywords" content="Commercial property for sale in Dubai, properties for sale in the UAE ,apartments for sale in Dubai hills estate" />
+        {PrevLinksRenderer()}
+        {NextLinksRenderer()}
       </Head>
       <FiltersProvider overrideFilters={filters}>
         <PropertiesListPage

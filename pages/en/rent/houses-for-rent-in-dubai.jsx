@@ -29,6 +29,20 @@ export async function getServerSideProps(context) {
 
 export default (props) => {
   const { data, filters, initialFilters } = props;
+  const paginationLink = '/en/rent/houses-for-rent-in-dubai?page=';
+  const NextLinksRenderer = () => {
+    const paginationLinknext = paginationLink + (data.pagination.page + 1);
+    if (data.pagination.page < data.pagination['page-count']) return (
+      <link rel="next" href={paginationLinknext} />
+    );
+    else return null;
+  };
+  const PrevLinksRenderer = () => {
+    const paginationLinkprev = paginationLink + (data.pagination.page - 1);
+    if(data.pagination.page > 1) return (
+      <link rel="prev" href={paginationLinkprev} />
+    );
+  };
 
   return (
     <>
@@ -36,6 +50,8 @@ export default (props) => {
         <title>Houses for rent in Dubai cheap | Houses for rent in Dubai UAE</title>
         <meta name="description" content="Reasonable property accessible in Dubai at staggering costs. Look at Now. Multiple options is available here houses, apartments, villas, flats, townhouses, beach views."/>
         <meta name="keywords" content="Houses for rent in Dubai Cheap, townhomes for rent in Dubai, villas to rent in Sharjah, apartment for rent in Abu Dhabi" />
+        {PrevLinksRenderer()}
+        {NextLinksRenderer()}
       </Head>
       <FiltersProvider overrideFilters={filters}>
         <PropertiesListPage

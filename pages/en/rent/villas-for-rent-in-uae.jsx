@@ -29,6 +29,20 @@ export async function getServerSideProps(context) {
 
 export default (props) => {
   const { data, filters, initialFilters } = props;
+  const paginationLink = '/en/rent/villas-for-rent-in-uae?page=';
+  const NextLinksRenderer = () => {
+    const paginationLinknext = paginationLink + (data.pagination.page + 1);
+    if (data.pagination.page < data.pagination['page-count']) return (
+      <link rel="next" href={paginationLinknext} />
+    );
+    else return null;
+  };
+  const PrevLinksRenderer = () => {
+    const paginationLinkprev = paginationLink + (data.pagination.page - 1);
+    if(data.pagination.page > 1) return (
+      <link rel="prev" href={paginationLinkprev} />
+    );
+  };
 
   return (
     <>
@@ -36,6 +50,8 @@ export default (props) => {
         <title>Villas for rent in UAE | Villa for rent in Dubai |Properties find at Zeekeez</title>
         <meta name="description" content="4266 Villas for rent in UAE on zeekeez.com. Spacious units, fully upgraded, affordable ready to move easy payment options. Now find world class properties here. "/>
         <meta name="keywords" content="villa for rent in Dubai, villa for rent in the palm Jumeirah, villas to rent in Abu Dhabi, villas for rent in UAE, villas for rent in Abu Dhabi, villas for rent in Dubai investment park" />
+        {PrevLinksRenderer()}
+        {NextLinksRenderer()}
       </Head>
       <FiltersProvider overrideFilters={filters}>
         <PropertiesListPage

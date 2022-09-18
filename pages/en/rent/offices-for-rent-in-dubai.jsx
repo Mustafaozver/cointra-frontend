@@ -29,6 +29,20 @@ export async function getServerSideProps(context) {
 
 export default (props) => {
   const { data, filters, initialFilters } = props;
+  const paginationLink = '/en/rent/offices-for-rent-in-dubai?page=';
+  const NextLinksRenderer = () => {
+    const paginationLinknext = paginationLink + (data.pagination.page + 1);
+    if (data.pagination.page < data.pagination['page-count']) return (
+      <link rel="next" href={paginationLinknext} />
+    );
+    else return null;
+  };
+  const PrevLinksRenderer = () => {
+    const paginationLinkprev = paginationLink + (data.pagination.page - 1);
+    if(data.pagination.page > 1) return (
+      <link rel="prev" href={paginationLinkprev} />
+    );
+  };
 
   return (
     <>
@@ -36,6 +50,8 @@ export default (props) => {
         <title>Affordable Office on rent in Dubai, UAE |Office space for rent in Dubai-Zeekeez</title>
         <meta name="description" content="3129 Offices for rent in Dubai UAE, Completely outfitted adjusted workplaces are accessible for rent in Dubai. Book your office for rent in Dubai outfitted with all cutting edge office conveniences."/>
         <meta name="keywords" content="Offices for rent in Dubai UAE, office space for rent in Dubai, office on rent in Dubai" />
+        {PrevLinksRenderer()}
+        {NextLinksRenderer()}
       </Head>
       <FiltersProvider overrideFilters={filters}>
         <PropertiesListPage

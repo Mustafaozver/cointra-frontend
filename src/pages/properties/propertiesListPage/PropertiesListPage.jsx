@@ -16,6 +16,7 @@ import PropertyItem from '../../../components/properties/propertyItem/PropertyIt
 import PropertySorter from '../../../components/properties/propertySorter/PropertySorter';
 import ContactPopup from '../../../components/popup/contactPopup/ContactPopup';
 import PropertiesFilters from '../../../components/propertiesFilters/PropertiesFilters';
+import NavBar from '../../../components/navbar/navbar';
 
 const PropertiesListPage = (props) => {
   const {
@@ -25,6 +26,7 @@ const PropertiesListPage = (props) => {
     seoText,
   } = props;
   const router = useRouter();
+  console.log(mainTitle);
 
   const [propertiesFilters, setPropertiesFilters, , , , isFetched, setIsFetched] = useContext(FiltersContext);
   const [properties, setProperties] = useState(data ? data.properties : []);
@@ -183,6 +185,10 @@ const PropertiesListPage = (props) => {
             */}
           </div>
         </div>
+        {NavBar({ Paths: [
+          { Path: 'Home', Url: '/' },
+          { Path: mainTitle, Url: router.asPath },
+        ] })}
         <div className={`${styles['properties-list-page-container']} ${styles[`view-${view}`]}`}>
           {renderLoader()}
           {getPropertiesRender()}

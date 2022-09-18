@@ -29,6 +29,20 @@ export async function getServerSideProps(context) {
 
 export default (props) => {
   const { data, filters, initialFilters } = props;
+  const paginationLink = '/en/rent/apartments-for-rent-in-dubai?page=';
+  const NextLinksRenderer = () => {
+    const paginationLinknext = paginationLink + (data.pagination.page + 1);
+    if (data.pagination.page < data.pagination['page-count']) return (
+      <link rel="next" href={paginationLinknext} />
+    );
+    else return null;
+  };
+  const PrevLinksRenderer = () => {
+    const paginationLinkprev = paginationLink + (data.pagination.page - 1);
+    if(data.pagination.page > 1) return (
+      <link rel="prev" href={paginationLinkprev} />
+    );
+  };
 
   return (
     <>
@@ -36,6 +50,8 @@ export default (props) => {
         <title>Apartments to rent in Dubai | 3129 Apartments for rent in Dubai UAE</title>
         <meta name="description" content="Might it be said that you are searching a property for rent in Dubai? Observe an apartments or villas or commercial space of your decision, we offer a wide scope of residential properties. Reach us Now !"/>
         <meta name="keywords" content="apartments to rent in Dubai, apartments for rent in business bay, apartments for rent in Dubai land, house for rent in Dubai, apartment for rent in downtown Dubai, apartments to rent in Dubai marina" />
+        {PrevLinksRenderer()}
+        {NextLinksRenderer()}
       </Head>
       <FiltersProvider overrideFilters={filters}>
         <PropertiesListPage
