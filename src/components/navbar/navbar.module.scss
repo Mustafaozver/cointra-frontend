@@ -18,17 +18,17 @@
 }
 
 .NavBar_Step ul li+li::before {
-	//padding: 10px;
+	font-size: inherit;
 }
 .NavBar_Step a {
 	text-decoration: none;
 }
 .NavBar_First_Step {
-	//margin-left: 1em;
+	font-size: inherit;
 	
 }
 .NavBar_Continues_Step {
-	
+	font-size: inherit;
 }
 
 .NavBar_Continues_Step::before {
