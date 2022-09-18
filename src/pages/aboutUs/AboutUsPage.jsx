@@ -10,10 +10,12 @@ import NavBar from '../../components/navbar/navbar';
 
 const AboutUsPage = (props) => (
   <div className={styles['page-about-us']}>
-    {NavBar({ Paths: [
-      { Path: 'Home', Url: '/' },
-      { Path: 'About Us', Url: '/en/about-us' },
-    ] })}
+    <NavBar
+      Paths={[
+        { Path: 'Home', Url: '/' },
+        { Path: 'About Us', Url: '/en/about-us' },
+      ]}
+    ></NavBar>
     <MyPZContainer>
       <AboutUsTitle {...props} />
       <AboutUsInterest />

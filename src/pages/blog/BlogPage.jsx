@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 import React from 'react';
 import moment from 'moment';
 import Link from 'next/link';
@@ -52,10 +52,10 @@ const BlogPage = (props) => {
   return (<div className={styles['page-blog']}>
     <MyPZContainer>
       <h1>{title}</h1>
-      {NavBar({ Paths: [
+      <NavBar Paths={[
         { Path: 'Home', Url: '/' },
         { Path: title, Url: '/en/' + title },
-      ] })}
+      ]}></NavBar>
       {renderPosts()}
       <div className={styles['page-blog__pagination']}>
         <MyPZPagination

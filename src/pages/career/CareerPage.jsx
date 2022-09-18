@@ -154,10 +154,12 @@ const CareerPage = (props) => {
 
   return (
     <MyPZContainer>
-      {NavBar({ Paths: [
-        { Path: 'Home', Url: '/' },
-        { Path: 'Career', Url: '/en/career' },
-      ] })}
+      <NavBar
+        Paths={[
+          { Path: 'Home', Url: '/' },
+          { Path: 'Career', Url: '/en/career' },
+        ]}
+      ></NavBar>
       <div className={styles['page-career']}>
         <MyPZContainer className={styles['page-career__form']}>
           <h1>{mainTitle}</h1>

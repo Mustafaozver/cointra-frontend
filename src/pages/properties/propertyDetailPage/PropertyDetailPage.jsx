@@ -203,10 +203,12 @@ const PropertyDetailPage = (props) => {
   return (
     <div className={styles['property-detail-page']}>
       <MyPZContainer>
-        {NavBar({ Paths: [
-          { Path: 'Home', Url: '/' },
-          { Path: property.title, Url: '/en/properties/' + property.slug },
-        ] })}
+        <NavBar
+          Paths={[
+            { Path: 'Home', Url: '/' },
+            { Path: property.title, Url: '/en/properties/' + property.slug },
+          ]}
+        ></NavBar>
         <ContactPopup
           isOpen={isContactOpen}
           onClose={onCloseContactPopup}

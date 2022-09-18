@@ -185,10 +185,12 @@ const PropertiesListPage = (props) => {
             */}
           </div>
         </div>
-        {NavBar({ Paths: [
-          { Path: 'Home', Url: '/' },
-          { Path: mainTitle, Url: router.asPath },
-        ] })}
+        <NavBar
+          Paths={[
+            { Path: 'Home', Url: '/' },
+            { Path: mainTitle, Url: router.asPath },
+          ]}
+        ></NavBar>
         <div className={`${styles['properties-list-page-container']} ${styles[`view-${view}`]}`}>
           {renderLoader()}
           {getPropertiesRender()}

@@ -29,13 +29,13 @@ const BlogPostPage = (props) => {
   return (<div className={styles['page-blog-post']}>
     <MyPZContainer>
       <h1>{post.title}</h1>
-      {NavBar({ Paths: [
-        { Path: 'Home', Url: '/' },
-        //{ Path: post.category, Url: '/en/' + post.category },
-        //{ Path: post.title, Url: post.title },
-        { Path: postDetail.Path, Url: postDetail.Url },
-        { Path: postDetail.Name, Url: postDetail.Name },
-      ] })}
+      <NavBar
+        Paths={[
+          { Path: 'Home', Url: '/' },
+          { Path: postDetail.Path, Url: postDetail.Url },
+          { Path: postDetail.Name, Url: postDetail.Name },
+        ]}
+      ></NavBar>
       <div className={styles['page-blog-post__header']}>
         <img src={post.coverImageUrl} alt={post.title} />
       </div>

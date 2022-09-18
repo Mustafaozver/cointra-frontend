@@ -194,10 +194,12 @@ const ContactPage = (props) => {
 
   return (
     <MyPZContainer>
-      {NavBar({ Paths: [
-        { Path: 'Home', Url: '/' },
-        { Path: 'Contact', Url: '/en/contact' },
-      ] })}
+      <NavBar
+        Paths={[
+          { Path: 'Home', Url: '/' },
+          { Path: 'Contact', Url: '/en/contact' },
+        ]}
+      ></NavBar>
       <div className={styles['page-contact']}>
         <MyPZContainer className={styles['page-contact__form']}>
           <h1>{mainTitle}</h1>

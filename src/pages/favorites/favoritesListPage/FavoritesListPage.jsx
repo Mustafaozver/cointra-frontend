@@ -127,10 +127,12 @@ const FavoritesListPage = () => {
   return (
     <div className={styles['properties-list-page']}>
       <MyPZContainer>
-        {NavBar({ Paths: [
-          { Path: 'Home', Url: '/' },
-          { Path: 'Favorites', Url: '/en/favorites' },
-        ] })}
+        <NavBar
+          Paths={[
+            { Path: 'Home', Url: '/' },
+            { Path: 'Favorites', Url: '/en/favorites' },
+          ]}
+        ></NavBar>
         <ContactPopup
           isOpen={isContactOpen}
           onClose={onCloseContactPopup}
