@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-key */
+
 import React from 'react';
 import styles from './NavBar.module.scss';
 import { MyPZLink } from '../../mypzkit';
@@ -10,7 +10,7 @@ const BuildPathUI = (path) => {
     <ul className={styles['NavBar_OutSide']}>
       {path.map((item, index) => {
         return (
-          <li className={styles['NavBar_Step']}>
+          <li className={styles['NavBar_Step']} key='navbar'>
             {index == isFirst ?
               <span className={styles['NavBar_First_Step']}></span> // first step
               : 
