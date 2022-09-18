@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useContext, useEffect } from 'react';
 import queryString from 'query-string';
 import { useRouter } from 'next/router';
