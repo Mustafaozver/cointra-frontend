@@ -16,7 +16,7 @@ import PropertyItem from '../../../components/properties/propertyItem/PropertyIt
 import PropertySorter from '../../../components/properties/propertySorter/PropertySorter';
 import ContactPopup from '../../../components/popup/contactPopup/ContactPopup';
 import PropertiesFilters from '../../../components/propertiesFilters/PropertiesFilters';
-import NavBar from '../../../components/navbar/navbar';
+import NavigationBar from '../../../components/NavigationBar/NavigationBar';
 
 const PropertiesListPage = (props) => {
   const {
@@ -185,12 +185,12 @@ const PropertiesListPage = (props) => {
             */}
           </div>
         </div>
-        <NavBar
+        <NavigationBar
           Paths={[
             { Path: 'Home', Url: '/' },
             { Path: mainTitle, Url: router.asPath },
           ]}
-        ></NavBar>
+        ></NavigationBar>
         <div className={`${styles['properties-list-page-container']} ${styles[`view-${view}`]}`}>
           {renderLoader()}
           {getPropertiesRender()}

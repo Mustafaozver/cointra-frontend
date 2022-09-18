@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './BlogPostPage.module.scss';
 
 import { MyPZContainer } from '../../mypzkit';
-import NavBar from '../../components/navbar/navbar';
+import NavigationBar from '../../components/NavigationBar/NavigationBar';
 
 const BlogPostPage = (props) => {
   const { post } = props;
@@ -29,13 +29,13 @@ const BlogPostPage = (props) => {
   return (<div className={styles['page-blog-post']}>
     <MyPZContainer>
       <h1>{post.title}</h1>
-      <NavBar
+      <NavigationBar
         Paths={[
           { Path: 'Home', Url: '/' },
           { Path: postDetail.Path, Url: postDetail.Url },
           { Path: postDetail.Name, Url: postDetail.Name },
         ]}
-      ></NavBar>
+      ></NavigationBar>
       <div className={styles['page-blog-post__header']}>
         <img src={post.coverImageUrl} alt={post.title} />
       </div>

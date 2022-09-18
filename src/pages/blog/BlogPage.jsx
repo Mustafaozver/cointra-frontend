@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import styles from './BlogPage.module.scss';
 
 import { MyPZButton, MyPZContainer, MyPZPagination } from '../../mypzkit';
-import NavBar from '../../components/navbar/navbar';
+import NavigationBar from '../../components/NavigationBar/NavigationBar';
 
 const BlogPage = (props) => {
   const {
@@ -52,10 +52,10 @@ const BlogPage = (props) => {
   return (<div className={styles['page-blog']}>
     <MyPZContainer>
       <h1>{title}</h1>
-      <NavBar Paths={[
+      <NavigationBar Paths={[
         { Path: 'Home', Url: '/' },
         { Path: title, Url: '/en/' + title },
-      ]}></NavBar>
+      ]}></NavigationBar>
       {renderPosts()}
       <div className={styles['page-blog__pagination']}>
         <MyPZPagination

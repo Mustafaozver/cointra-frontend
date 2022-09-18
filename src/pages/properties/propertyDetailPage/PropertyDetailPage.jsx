@@ -22,7 +22,7 @@ import {
   filtersToParams,
   stringifyParams,
 } from '../../../helpers/propertyFilterHelper';
-import NavBar from '../../../components/navbar/navbar';
+import NavigationBar from '../../../components/NavigationBar/NavigationBar';
 
 const PropertyDetailPage = (props) => {
   const {
@@ -203,12 +203,12 @@ const PropertyDetailPage = (props) => {
   return (
     <div className={styles['property-detail-page']}>
       <MyPZContainer>
-        <NavBar
+        <NavigationBar
           Paths={[
             { Path: 'Home', Url: '/' },
             { Path: property.title, Url: '/en/properties/' + property.slug },
           ]}
-        ></NavBar>
+        ></NavigationBar>
         <ContactPopup
           isOpen={isContactOpen}
           onClose={onCloseContactPopup}

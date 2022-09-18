@@ -12,7 +12,7 @@ import {
   filtersToParams,
   stringifyParams,
 } from '../../../helpers/propertyFilterHelper';
-import NavBar from '../../../components/navbar/navbar';
+import NavigationBar from '../../../components/NavigationBar/NavigationBar';
 
 const FavoritesListPage = () => {
   const [properties, setProperties] = useState([]);
@@ -127,12 +127,12 @@ const FavoritesListPage = () => {
   return (
     <div className={styles['properties-list-page']}>
       <MyPZContainer>
-        <NavBar
+        <NavigationBar
           Paths={[
             { Path: 'Home', Url: '/' },
             { Path: 'Favorites', Url: '/en/favorites' },
           ]}
-        ></NavBar>
+        ></NavigationBar>
         <ContactPopup
           isOpen={isContactOpen}
           onClose={onCloseContactPopup}

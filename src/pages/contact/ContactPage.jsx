@@ -13,7 +13,7 @@ import {
 } from '../../mypzkit';
 import InputTextArea from '../../components/inputs/inputTextArea/InputTextArea';
 import { contactUs } from '../../api/contacts/contactsApi';
-import NavBar from '../../components/navbar/navbar';
+import NavigationBar from '../../components/NavigationBar/NavigationBar';
 
 const optionsType = [
   {
@@ -194,12 +194,12 @@ const ContactPage = (props) => {
 
   return (
     <MyPZContainer>
-      <NavBar
+      <NavigationBar
         Paths={[
           { Path: 'Home', Url: '/' },
           { Path: 'Contact', Url: '/en/contact' },
         ]}
-      ></NavBar>
+      ></NavigationBar>
       <div className={styles['page-contact']}>
         <MyPZContainer className={styles['page-contact__form']}>
           <h1>{mainTitle}</h1>

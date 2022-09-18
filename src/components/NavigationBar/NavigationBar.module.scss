@@ -1,14 +1,14 @@
-.NavBar {
+.NavigationBar {
 	padding: 0.2em;
 	margin: 0.2em;
 	background-color: white;
 	color: #000000;
 }
-.NavBar_OutSide {
+.NavigationBar_OutSide {
 	list-style: none;
 	padding: 10px 16px;
 }
-.NavBar_Step {
+.NavigationBar_Step {
 	display: inline;
 	padding: 0.1rem;
 	margin: 0.1rem;
@@ -23,20 +23,20 @@
 		text-decoration: none;
 	}
 }
-.NavBar_First_Step {
+.NavigationBar_First_Step {
 	font-size: inherit;
 }
-.NavBar_Continues_Step {
+.NavigationBar_Continues_Step {
 	font-size: inherit;
 	&::before {
 		content: "/\00a0";
 	}
 }
-.NavBar_Continues_Link {
+.NavigationBar_Continues_Link {
 	font-size: 12px;
 	line-height: 12px;
 }
-.NavBar_End_Link {
+.NavigationBar_End_Link {
 	font-size: 12px;
 	line-height: 12px;
 }
