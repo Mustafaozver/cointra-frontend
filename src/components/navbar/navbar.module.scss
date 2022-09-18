@@ -1,45 +1,42 @@
-
 .NavBar {
-	padding:0.2em;
+	padding: 0.2em;
 	margin: 0.2em;
 	background-color: white;
 	color: #000000;
 }
-
 .NavBar_OutSide {
 	list-style: none;
 	padding: 10px 16px;
 }
-
 .NavBar_Step {
 	display: inline;
 	padding: 0.1rem;
 	margin: 0.1rem;
-}
-
-.NavBar_Step ul li+li::before {
-	font-size: inherit;
-}
-.NavBar_Step a {
-	text-decoration: none;
+	ul {
+		li+li {
+			&::before {
+				font-size: inherit;
+			}
+		}
+	}
+	a {
+		text-decoration: none;
+	}
 }
 .NavBar_First_Step {
 	font-size: inherit;
-	
 }
 .NavBar_Continues_Step {
 	font-size: inherit;
+	&::before {
+		content: "/\00a0";
+	}
 }
-
-.NavBar_Continues_Step::before {
-	content: "/\00a0";
-}
-
 .NavBar_Continues_Link {
-    font-size: 12px;
-    line-height: 12px;
+	font-size: 12px;
+	line-height: 12px;
 }
 .NavBar_End_Link {
-    font-size: 12px;
-    line-height: 12px;
+	font-size: 12px;
+	line-height: 12px;
 }
