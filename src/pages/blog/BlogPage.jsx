@@ -25,6 +25,7 @@ const BlogPage = (props) => {
           <a>
             <div className={styles['page-blog__post-header']}>
               <img src={post.miniatureImageUrl} />
+              
             </div>
             <div className={styles['page-blog__post-content']}>
               <div className={styles['page-blog__post-title']}>{post.title}</div>
