@@ -46,16 +46,12 @@ const MyPZPagination = (props) => {
     if(!isDisabled){
       return (
         <MyPZLink to={link} key={key}>
-          <a>
-            {renderButton(page, name, isDisabled)}
-          </a>
+          {renderButton(page, name, isDisabled)}
         </MyPZLink>
       );
     }
     return (
-      <a>
-        {renderButton(page, name, isDisabled)}
-      </a>
+      null
     );
   };
 
