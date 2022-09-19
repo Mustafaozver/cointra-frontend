@@ -50,9 +50,8 @@ const MyPZPagination = (props) => {
         </MyPZLink>
       );
     }
-    return (
-      null
-    );
+    else if (key > 0) return renderButton(page, name, isDisabled);
+    return null;
   };
 
   const renderFinalButton = (page, content, isDisabled, key) => {
@@ -124,8 +123,8 @@ const MyPZPagination = (props) => {
       min = Math.max(min, 1);
       max = Math.min(max, maxPage);
     }
-
-    for (let i = min; i <= max; i += 1) {
+    console.log(min, ' - ', max);
+    for (let i = min; i <= max; i++) {
       middle.push(renderPageButton(i));
     }
 
