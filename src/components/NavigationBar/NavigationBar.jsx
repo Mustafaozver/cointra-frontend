@@ -6,6 +6,7 @@ import { MyPZLink } from '../../mypzkit';
 
 
 const NavigationBar = (props) => {
+  return null;
   const BuildPathUI = (path) => {
     const isFirst = 0;
     const isLast = path.length - 1;
