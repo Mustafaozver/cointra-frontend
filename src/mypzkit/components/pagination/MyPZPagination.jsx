@@ -123,7 +123,6 @@ const MyPZPagination = (props) => {
       min = Math.max(min, 1);
       max = Math.min(max, maxPage);
     }
-    console.log(min, ' - ', max);
     for (let i = min; i <= max; i++) {
       middle.push(renderPageButton(i));
     }
