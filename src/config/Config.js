@@ -3,7 +3,7 @@ const config = {
   // TODO: put back NEXT_PUBLIC_BASE_API_URL
   baseApiUrl: process.env.NEXT_PUBLIC_BASE_API_URL || 'https://api.zeekeez.com', // 'http://localhost:8005',
   baseCDNUrl: process.env.NEXT_PUBLIC_BASE_CDN_URL || 'https://d23pgcxghat6wz.cloudfront.net/',
-  mapPublicKey: process.env.NEXT_PUBLIC_MAP_PUBLIC_KEY || 'AIzaSyAtv44A4TvoBV6ZQhp6-EEzEl5UkCuEnJk',
+  mapPublicKey: 'AIzaSyD6ZVbpG5exHmlBvoRu8OBtfTbVh9e6AhY',//process.env.NEXT_PUBLIC_MAP_PUBLIC_KEY || 'AIzaSyAtv44A4TvoBV6ZQhp6-EEzEl5UkCuEnJk',
   googleAnalyticsTrackingCode: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_KEY || 'UA-165874994-1',
   facebookUrl: 'https://www.facebook.com/v12.0/dialog/oauth',
   facebookParams: {
