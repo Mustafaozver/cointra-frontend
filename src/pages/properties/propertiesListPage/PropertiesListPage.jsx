@@ -26,7 +26,6 @@ const PropertiesListPage = (props) => {
     seoText,
   } = props;
   const router = useRouter();
-  console.log(mainTitle);
 
   const [propertiesFilters, setPropertiesFilters, , , , isFetched, setIsFetched] = useContext(FiltersContext);
   const [properties, setProperties] = useState(data ? data.properties : []);

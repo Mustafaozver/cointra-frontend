@@ -29,7 +29,6 @@ const run = async () => {
     .map((f) => {
       return f.replace('./pages/', '').replace('.jsx', '');
     });
-  console.log(res);
 };
 
 run();
