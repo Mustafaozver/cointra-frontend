@@ -287,7 +287,7 @@ const HomePage = (props) => {
   return (
     <div className={styles['home-page']}>
       <script type="application/ld+json">
-        {'{"@context":"https://schema.org","@type":"Organization","name":"Zeekeez","description":"Zeekez.com is the 1st UAE’s Property Portal for people to explore, research and share their interests for the UAE property market.","url":"https://zeekeez.com","sameAs":["https://www.facebook.com/people/Zeekeez/100079499966747/","https://www.instagram.com/zeekeez_official/","https://www.linkedin.com/company/zeekeez"],"telephone":"+97145781335","foundingDate":"2022"}'}
+        {'{"@context":"https://schema.org","@type":"Organization","name":"Zeekeez","description":"Zeekeez.com is the 1st UAE’s Property Portal for people to explore, research and share their interests for the UAE property market.","url":"https://zeekeez.com","sameAs":["https://www.facebook.com/people/Zeekeez/100079499966747/","https://www.instagram.com/zeekeez_official/","https://www.linkedin.com/company/zeekeez"],"telephone":"+97145781335","foundingDate":"2022"}'}
       </script>
       <div className={styles['home-page_section-header']}>
         {renderFilterProps()}
