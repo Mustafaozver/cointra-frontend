@@ -60,6 +60,7 @@ export default function MyApp(props) {
         <title>Property Portal UAE - Best Property Finder Alternative | zeekeez.com</title>
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="canonical" href={`${config.baseUrl}${router.asPath}`} />
+        <meta name="ahrefs-site-verification" content="e2bf64b8fb7392d69161cdaaedd1d8db1b743c7442500822954b767eb954d1d4"></meta>
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4W3JQX" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} />
         </noscript>
