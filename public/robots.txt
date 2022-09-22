@@ -1,4 +1,7 @@
+Sitemap: https://www.zeekeez.com/sitemap.xml
+
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
 Disallow: /en/favorites/
 Disallow: /users/
@@ -6,5 +9,3 @@ Disallow: /500
 Disallow: /404
 Disallow: /facebook-login
 Disallow: /google-login
-
-Sitemap: https://www.zeekeez.com/sitemap.xml
