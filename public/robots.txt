@@ -1,7 +1,5 @@
-Sitemap: https://www.zeekeez.com/sitemap.xml
-
 # https://www.robotstxt.org/robotstxt.html
-
+Sitemap: https://www.zeekeez.com/sitemap.xml
 User-agent: *
 Disallow: /en/favorites/
 Disallow: /users/
