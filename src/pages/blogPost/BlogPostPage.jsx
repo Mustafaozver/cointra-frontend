@@ -8,7 +8,6 @@ import NavigationBar from '../../components/NavigationBar/NavigationBar';
 
 const BlogPostPage = (props) => {
   const { post } = props;
-  console.log(post);
   const postDetail = (()=>{
     switch (post.category.toLowerCase()) {
     case 'guide':

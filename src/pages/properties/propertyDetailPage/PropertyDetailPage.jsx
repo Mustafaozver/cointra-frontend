@@ -28,6 +28,7 @@ const PropertyDetailPage = (props) => {
   const {
     property,
     h1,
+    description,
   } = props;
 
   const [isContactOpen, setIsContactOpen] = useState(false);

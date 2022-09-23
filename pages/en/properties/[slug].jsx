@@ -54,7 +54,7 @@ export default (props) => {
         <title>{title}</title>
         <meta name="description" content={metaDescription}/>
       </Head>
-      <PropertyDetailPage property={property} h1={h1}/>
+      <PropertyDetailPage property={property} h1={h1} description={metaDescription}/>
     </>
   );
 }

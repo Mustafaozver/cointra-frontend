@@ -34,7 +34,7 @@ const MyPZPagination = (props) => {
         onClick={handleOnChange(page)}
         disabled={isDisabled}
         className={styles[`mypz-pagination__button${currentPage === page ? '-active' : ''}`]}
-        key={key}
+        key={'Pagination_' + content}
         type="button"
       >
         {content}
@@ -45,9 +45,9 @@ const MyPZPagination = (props) => {
   const renderLinkButton = (link, page, name, isDisabled, key) => {
     if(!isDisabled){
       return (
-        <MyPZLink to={link} key={key}>
+        <a to={link} key={key}>
           {renderButton(page, name, isDisabled)}
-        </MyPZLink>
+        </a>
       );
     }
     else if (key > 0) return renderButton(page, name, isDisabled);
