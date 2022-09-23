@@ -45,7 +45,7 @@ const MyPZPagination = (props) => {
   const renderLinkButton = (link, page, name, isDisabled, key) => {
     if(!isDisabled){
       return (
-        <a to={link} key={key}>
+        <a href={link} key={key}>
           {renderButton(page, name, isDisabled)}
         </a>
       );
