@@ -28,7 +28,6 @@ const BlogPostPage = (props) => {
   })();
   return (<div className={styles['page-blog-post']}>
     <MyPZContainer>
-      <h1>{post.title}</h1>
       <NavigationBar
         Paths={[
           { Path: 'Home', Url: '/' },
@@ -36,6 +35,7 @@ const BlogPostPage = (props) => {
           { Path: postDetail.Name, Url: postDetail.Name },
         ]}
       ></NavigationBar>
+      <h1>{post.title}</h1>
       <div className={styles['page-blog-post__header']}>
         <img src={post.coverImageUrl} alt={post.title} />
       </div>

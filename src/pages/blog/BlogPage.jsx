@@ -52,11 +52,11 @@ const BlogPage = (props) => {
 
   return (<div className={styles['page-blog']}>
     <MyPZContainer>
-      <h1>{title}</h1>
       <NavigationBar Paths={[
         { Path: 'Home', Url: '/' },
         { Path: title, Url: '/en/' + title },
       ]}></NavigationBar>
+      <h1>{title}</h1>
       {renderPosts()}
       <div className={styles['page-blog__pagination']}>
         <MyPZPagination

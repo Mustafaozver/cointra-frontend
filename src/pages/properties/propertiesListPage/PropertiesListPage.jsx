@@ -173,6 +173,12 @@ const PropertiesListPage = (props) => {
         <div className={styles['properties-list-page-filters']}>
           <PropertiesFilters />
         </div>
+        <NavigationBar
+          Paths={[
+            { Path: 'Home', Url: '/' },
+            { Path: mainTitle, Url: router.asPath },
+          ]}
+        ></NavigationBar>
         <div className={styles['properties-list-page-summary']}>
           <h1 className={styles['properties-list-page-title']}>
             {`${paginationData ? paginationData.total : 0} ${mainTitle}`}
@@ -184,12 +190,6 @@ const PropertiesListPage = (props) => {
             */}
           </div>
         </div>
-        <NavigationBar
-          Paths={[
-            { Path: 'Home', Url: '/' },
-            { Path: mainTitle, Url: router.asPath },
-          ]}
-        ></NavigationBar>
         <div className={`${styles['properties-list-page-container']} ${styles[`view-${view}`]}`}>
           {renderLoader()}
           {getPropertiesRender()}
