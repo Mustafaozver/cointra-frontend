@@ -283,12 +283,31 @@ const HomePage = (props) => {
     </MyPZContainer>);
   };
   
+  const schemaJson = {
+    '@context': 'https://schema.org',
+    '@type': 'Corporation',
+    name: 'zeekeez',
+    url: 'https://www.zeekeez.com',
+    logo: 'https://www.zeekeez.com/images/zeekeez-logo-black.svg',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+97145781335',
+      contactType: 'customer service',
+      areaServed: 'AE',
+      availableLanguage: ['en', 'ar']
+    },
+    sameAs: [
+      'https://www.facebook.com/zeekeez/',
+      'https://www.instagram.com/zeekeez_official/',
+      'https://www.linkedin.com/company/zeekeez',
+      'https://www.zeekeez.com/'
+    ]
+  };
+  
   
   return (
     <div className={styles['home-page']}>
-      <script type="application/ld+json">
-        {'{"@context":"https://schema.org","@type":"Organization","name":"Zeekeez","description":"Zeekeez.com is the 1st UAE’s Property Portal for people to explore, research and share their interests for the UAE property market.","url":"https://zeekeez.com","sameAs":["https://www.facebook.com/people/Zeekeez/100079499966747/","https://www.instagram.com/zeekeez_official/","https://www.linkedin.com/company/zeekeez"],"telephone":"+97145781335","foundingDate":"2022"}'}
-      </script>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
       <div className={styles['home-page_section-header']}>
         {renderFilterProps()}
       </div>

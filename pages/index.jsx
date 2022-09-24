@@ -32,28 +32,6 @@ export async function getServerSideProps(context) {
 
 export default (props) => {
   const { suggestedProperties } = props;
-
-  const schemaJson = {
-    '@context': 'https://schema.org',
-    '@type': 'Corporation',
-    name: 'zeekeez',
-    url: 'https://www.zeekeez.com',
-    logo: 'https://www.zeekeez.com/images/zeekeez-logo-black.svg',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+97145781335',
-      contactType: 'customer service',
-      areaServed: 'AE',
-      availableLanguage: ['en', 'ar']
-    },
-    sameAs: [
-      'https://www.facebook.com/zeekeez/',
-      'https://www.instagram.com/zeekeez_official/',
-      'https://www.linkedin.com/company/zeekeez',
-      'https://www.zeekeez.com/'
-    ]
-  };
-
   return (
     <>
       <Head>
@@ -62,7 +40,6 @@ export default (props) => {
         </title>
         <meta name="description" content="Zeekeez.com is the biggest property portal in the UAE with a broad scope of residential and commercial properties available for sale and for rent." />
         <meta name="keywords" content="property portal for UAE, apartments for sale in UAE, villas to rent in UAE, best property finder alternative" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
       </Head>
       <FiltersProvider>
         {/*
