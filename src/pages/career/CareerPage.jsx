@@ -14,6 +14,30 @@ import InputTextArea from '../../components/inputs/inputTextArea/InputTextArea';
 import { contactUs } from '../../api/contacts/contactsApi';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
 
+const schemaJson = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Zeekeez',
+  url: 'https://www.zeekeez.com',
+  logo: 'https://www.zeekeez.com/images/zeekeez-logo-black.svg',
+  description: 'Zeekez.com is the 1st UAE’s Property Portal for people to explore, research and share their interests for the UAE property market.',
+  telephone: '+97145781335',
+  foundingDate: '2022',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+97145781335',
+    contactType: 'customer service',
+    areaServed: 'AE',
+    availableLanguage: ['en', 'ar']
+  },
+  sameAs: [
+    'https://www.facebook.com/people/Zeekeez/100079499966747/',
+    'https://www.instagram.com/zeekeez_official/',
+    'https://www.linkedin.com/company/zeekeez',
+    'https://www.zeekeez.com/'
+  ]
+};
+
 const CareerPage = (props) => {
   const resetInputs = {
     firstName: '',
@@ -134,7 +158,7 @@ const CareerPage = (props) => {
         - Human Ressource Manager <br />
       </ContentSidebar>
       <ContentSidebar title="Corporate Headquarters">
-        zeekeez<br />
+        Zeekeez<br />
         Dubai – United Arab Emirates<br />
       </ContentSidebar>
     </div>
@@ -199,6 +223,7 @@ const ContentSidebar = (props) => {
 
   return (
     <div className={styles['page-career__sidebar__block']}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
       <div className={styles['page-career__sidebar__title']}>{title}</div>
       <div className={styles['page-career__sidebar__content']}>
         {children}

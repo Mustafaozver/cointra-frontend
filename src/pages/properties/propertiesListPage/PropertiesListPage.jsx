@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import styles from './PropertiesListPage.module.scss';
 
-import { MyPZContainer, MyPZPagination, MyPZCircleLoader } from '../../../mypzkit';
+import { MyPZContainer, MyPZPagination, MyPZCircleLoader, MyPZShowMore } from '../../../mypzkit';
 import { contactAgent, getProperties, getPropertyEmail } from '../../../api/properties/propertiesApi';
 import {
   filtersToParams,
