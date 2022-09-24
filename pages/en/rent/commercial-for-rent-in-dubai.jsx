@@ -48,7 +48,7 @@ export default (props) => {
     <>
       <Head>
         <title>Commercial Properties for Rent in Dubai | zeekeez.com</title>
-        <meta name="description" content="Commercial to Rent in Dubai UAE. Rent Commercial Properties in Dubai : Offices, Stores, Retails, Warehouses, Full floors…"/>
+        <meta name="description" content="Commercial to Rent in Dubai UAE. Rent Commercial Properties in Dubai : Offices, Stores, Retails, Warehouses, Full floors..."/>
         {PrevLinksRenderer()}
         {NextLinksRenderer()}
       </Head>

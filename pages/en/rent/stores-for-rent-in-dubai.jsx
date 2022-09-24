@@ -47,7 +47,7 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>Studio for rent in Dubai monthly | 3129 Stores for rent in Dubai UAE |Zeekeez.com</title>
+        <title>Studio for rent in Dubai monthly |</title>
         <meta name="description" content="See Studio Apartments for rent in Dubai monthly with zeekeez.com browse from our 3129 properties. Well maintained, brand new, bright and spacious, close to metro."/>
         <meta name="keywords" content="properties for rent in Dubai, apartment to rent in Dubai marina, studio for rent in Dubai monthly, apartment to rent in Dubai marina" />
         {PrevLinksRenderer()}
