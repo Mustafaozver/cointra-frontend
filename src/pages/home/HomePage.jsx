@@ -285,10 +285,13 @@ const HomePage = (props) => {
   
   const schemaJson = {
     '@context': 'https://schema.org',
-    '@type': 'Corporation',
-    name: 'zeekeez',
+    '@type': 'Organization',
+    name: 'Zeekeez',
     url: 'https://www.zeekeez.com',
     logo: 'https://www.zeekeez.com/images/zeekeez-logo-black.svg',
+    description: 'Zeekez.com is the 1st UAE’s Property Portal for people to explore, research and share their interests for the UAE property market.',
+    telephone: '+97145781335',
+	  foundingDate: '2022',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+97145781335',
@@ -297,7 +300,7 @@ const HomePage = (props) => {
       availableLanguage: ['en', 'ar']
     },
     sameAs: [
-      'https://www.facebook.com/zeekeez/',
+      'https://www.facebook.com/people/Zeekeez/100079499966747/',
       'https://www.instagram.com/zeekeez_official/',
       'https://www.linkedin.com/company/zeekeez',
       'https://www.zeekeez.com/'
