@@ -30,7 +30,9 @@
 .NavigationBar_Continues_Step {
 	font-size: inherit;
 	&::before {
-		content: "/\00a0";
+		content: "> ";
+		font-weight: bold;
+		color:#3a3a3a;
 	}
 }
 .NavigationBar_Continues_Link {

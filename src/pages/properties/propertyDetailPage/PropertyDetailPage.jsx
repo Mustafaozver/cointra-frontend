@@ -225,15 +225,32 @@ const PropertyDetailPage = (props) => {
     setIsContactOpen(false);
     setContactData(null);
   };
+  const NavBarBuild = ()=>{
+    const arr = [];
+    arr.push({ Path: 'Home', Url: '/' });
+    console.log('CAT => ', property.category, ', SR => ', property.businessType);
+    switch (property.businessType){
+    case 'sale':
+      arr.push({ Path: 'Properties for sale in the UAE', Url: '/en/sale/properties-for-sale' });
+      break;
+    case 'rent':
+      arr.push({ Path: 'Properties for rent in the UAE', Url: '/en/rent/properties-for-rent' });
+      break;
+      defalut:
+      //arr.push({ Path: 'Home', Url: '/' });
+      break;
+    }
+    arr.push({ Path: property.title, Url: '/en/properties/' + property.slug });
+    console.log(property);
+    return arr;
+  };
+  
   return (
     <div className={styles['property-detail-page']}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
       <MyPZContainer>
         <NavigationBar
-          Paths={[
-            { Path: 'Home', Url: '/' },
-            { Path: property.title, Url: '/en/properties/' + property.slug },
-          ]}
+          Paths={NavBarBuild()}
         ></NavigationBar>
         <ContactPopup
           isOpen={isContactOpen}
