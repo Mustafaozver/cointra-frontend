@@ -1,6 +1,6 @@
 const We = {
   Setup: ()=>{
-    //console.log('ljghgvhkjlkl');
+    console.log('Join us to develop Zeekeez togather :)\n Get to https://www.zeekeez.com/en/career ');
   }
 };
 
