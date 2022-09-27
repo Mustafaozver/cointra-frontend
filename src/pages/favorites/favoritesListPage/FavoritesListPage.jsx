@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 import styles from './FavoritesListPage.module.scss';
 
@@ -125,35 +126,41 @@ const FavoritesListPage = () => {
   };
 
   return (
-    <div className={styles['properties-list-page']}>
-      <MyPZContainer>
-        <NavigationBar
-          Paths={[
-            { Path: 'Home', Url: '/' },
-            { Path: 'Favorites', Url: '/en/favorites' },
-          ]}
-        ></NavigationBar>
-        <ContactPopup
-          isOpen={isContactOpen}
-          onClose={onCloseContactPopup}
-          onSubmit={submitContactPopup}
-          data={contactData}
-          isSuccess={isContactSuccess}
-          isDisabled={isContactDisabled}
-        />
-        <div className={styles['properties-list-page-summary']}>
-          {renderSummary()}
-        </div>
-        <div className={`${styles['properties-list-page-container']} ${styles[`view-${view}`]}`}>
-          {getPropertiesRender()}
-          {/* Empty div to fill the last column if we have 2 items on 3 columns */}
-          <div className={styles['property-list-ghost-item']} />
-        </div>
-        <div className={styles['properties-list-page-pagination']}>
-          {getPaginationRender()}
-        </div>
-      </MyPZContainer>
-    </div>
+    <>
+      <Head>
+        <title>Your Discovery | Zeekeez</title>
+        <meta name="description" content="Look at your UAE’s Real Estate favourites"/>
+      </Head>
+      <div className={styles['properties-list-page']}>
+        <MyPZContainer>
+          <NavigationBar
+            Paths={[
+              { Path: 'Home', Url: '/' },
+              { Path: 'Favorites', Url: '/en/favorites' },
+            ]}
+          ></NavigationBar>
+          <ContactPopup
+            isOpen={isContactOpen}
+            onClose={onCloseContactPopup}
+            onSubmit={submitContactPopup}
+            data={contactData}
+            isSuccess={isContactSuccess}
+            isDisabled={isContactDisabled}
+          />
+          <div className={styles['properties-list-page-summary']}>
+            {renderSummary()}
+          </div>
+          <div className={`${styles['properties-list-page-container']} ${styles[`view-${view}`]}`}>
+            {getPropertiesRender()}
+            {/* Empty div to fill the last column if we have 2 items on 3 columns */}
+            <div className={styles['property-list-ghost-item']} />
+          </div>
+          <div className={styles['properties-list-page-pagination']}>
+            {getPaginationRender()}
+          </div>
+        </MyPZContainer>
+      </div>
+    </>
   );
 };
 
