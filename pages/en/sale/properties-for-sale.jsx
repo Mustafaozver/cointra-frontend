@@ -47,8 +47,8 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>Properties for sale in UAE -Apartments for sale in Dubai-Zeekeez	</title>
-        <meta name="description" content="Find all luxury and affordable properties for sale in UAE. Browse and select a wide assortment of properties available to be purchased with photographs, floorplan and amenities on zeekeez.com." />
+        <title>Buy or sale properties in UAE | Zeekeez</title>
+        <meta name="description" content="Best properties for sale in UAE are on Zeekeez. Buy residential properties in UAE. Invest in real estate in Dubai : Apartments, Villas, Studios, 1 Bedrooms..." />
         <meta name="keywords" content="Properties for sale in UAE, apartments for sale in Dubai, commercial property for sale in Dubai" />
         {PrevLinksRenderer()}
         {NextLinksRenderer()}

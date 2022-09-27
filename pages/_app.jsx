@@ -11,6 +11,10 @@ import config from '../src/config/Config';
 import MainLayout from '../src/components/layouts/main/MainLayout';
 import MyPZLinkContext from '../src/mypzkit/components/linkContext/MyPZLinkContext';
 
+import We from '../public/assets/we';
+
+We.Setup();
+
 export default function MyApp(props) {
   const { Component, pageProps, router } = props;
 

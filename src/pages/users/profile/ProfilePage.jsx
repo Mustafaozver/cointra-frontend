@@ -1,4 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
+import Head from 'next/head';
+
 import {
   MyPZContainer,
   MyPZAlert,
@@ -127,95 +129,93 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className={styles['user-profile-page']}>
-      <MyPZContainer>
-        <h1>Edit Profile</h1>
-
-        {renderAlert()}
-
-        <form onSubmit={handleSubmitForm}>
-          <div className={styles['user-profile-page__field']}>
-            <ImageCrop
-              onImageUploaded={onUploadImage}
-              imageWidth={100}
-              imageHeight={100}
-              uploadButtonLabel="Profile picture"
-              imageUrl={formData.imageUrl}
-            />
-          </div>
-          <div className={styles['user-profile-page__field']}>
-            <MyPZTextField
-              label="First Name"
-              value={formData.firstName}
-              onChange={handleInputChange('firstName')}
-              placeholder="John"
-              disabled={isProcessing}
-            />
-          </div>
-
-          <div className={styles['user-profile-page__field']}>
-            <MyPZTextField
-              label="Last Name"
-              value={formData.lastName}
-              onChange={handleInputChange('lastName')}
-              placeholder="Doe"
-              disabled={isProcessing}
-            />
-          </div>
-
-          <div className={styles['user-profile-page__field']}>
-            <MyPZTextField
-              label="Phone"
-              value={formData.phone}
-              onChange={handleInputChange('phone')}
-              placeholder="+971 123 456 789"
-              disabled={isProcessing}
-            />
-          </div>
-
-          <div className={styles['user-profile-page__field']}>
-            <MyPZTextField
-              label="Email"
-              value={formData.email}
-              placeholder="john@doe.com"
-              disabled
-            />
-          </div>
-
-          <div className={styles['user-profile-page__field']}>
-            <MyPZButton disabled={!isValidForm()} type="submit">
-              Save
-            </MyPZButton>
-          </div>
-        </form>
-
-        <h1>Change password</h1>
-
-        <form onSubmit={handleSubmitFormPassword}>
-          <div className={styles['user-profile-page__field']}>
-            <MyPZTextField
-              label="New password"
-              value={updatePasswordData.newPassword}
-              onChange={handleInputPasswordChange('newPassword')}
-              type="password"
-            />
-          </div>
-          <div className={styles['user-profile-page__field']}>
-            <MyPZTextField
-              label="Confirm password"
-              value={updatePasswordData.confirmPassword}
-              onChange={handleInputPasswordChange('confirmPassword')}
-              type="password"
-            />
-          </div>
-          <div className={styles['user-profile-page__field']}>
-            <MyPZButton disabled={!isValidFormPassword()} type="submit">
-              Update
-            </MyPZButton>
-          </div>
-        </form>
-      </MyPZContainer>
-    </div>
+    <>
+      <Head>
+        <title>Your Profile | Zeekeez</title>
+        <meta name="description" content="Look at your profile"/>
+      </Head>
+      <div className={styles['user-profile-page']}>
+        <MyPZContainer>
+          <h1>Edit Profile</h1>
+          {renderAlert()}
+          <form onSubmit={handleSubmitForm}>
+            <div className={styles['user-profile-page__field']}>
+              <ImageCrop
+                onImageUploaded={onUploadImage}
+                imageWidth={100}
+                imageHeight={100}
+                uploadButtonLabel="Profile picture"
+                imageUrl={formData.imageUrl}
+              />
+            </div>
+            <div className={styles['user-profile-page__field']}>
+              <MyPZTextField
+                label="First Name"
+                value={formData.firstName}
+                onChange={handleInputChange('firstName')}
+                placeholder="John"
+                disabled={isProcessing}
+              />
+            </div>
+            <div className={styles['user-profile-page__field']}>
+              <MyPZTextField
+                label="Last Name"
+                value={formData.lastName}
+                onChange={handleInputChange('lastName')}
+                placeholder="Doe"
+                disabled={isProcessing}
+              />
+            </div>
+            <div className={styles['user-profile-page__field']}>
+              <MyPZTextField
+                label="Phone"
+                value={formData.phone}
+                onChange={handleInputChange('phone')}
+                placeholder="+971 123 456 789"
+                disabled={isProcessing}
+              />
+            </div>
+            <div className={styles['user-profile-page__field']}>
+              <MyPZTextField
+                label="Email"
+                value={formData.email}
+                placeholder="john@doe.com"
+                disabled
+              />
+            </div>
+            <div className={styles['user-profile-page__field']}>
+              <MyPZButton disabled={!isValidForm()} type="submit">
+                Save
+              </MyPZButton>
+            </div>
+          </form>
+          <h1>Change password</h1>
+          <form onSubmit={handleSubmitFormPassword}>
+            <div className={styles['user-profile-page__field']}>
+              <MyPZTextField
+                label="New password"
+                value={updatePasswordData.newPassword}
+                onChange={handleInputPasswordChange('newPassword')}
+                type="password"
+              />
+            </div>
+            <div className={styles['user-profile-page__field']}>
+              <MyPZTextField
+                label="Confirm password"
+                value={updatePasswordData.confirmPassword}
+                onChange={handleInputPasswordChange('confirmPassword')}
+                type="password"
+              />
+            </div>
+            <div className={styles['user-profile-page__field']}>
+              <MyPZButton disabled={!isValidFormPassword()} type="submit">
+                Update
+              </MyPZButton>
+            </div>
+          </form>
+        </MyPZContainer>
+      </div>
+    </>
   );
 };
 

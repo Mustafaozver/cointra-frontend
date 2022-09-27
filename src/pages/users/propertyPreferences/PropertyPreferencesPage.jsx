@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+
 import { MyPZAlert, MyPZContainer } from '../../../mypzkit';
 
 import styles from './PropertyPreferencesPage.module.scss';
@@ -84,21 +86,25 @@ const PropertyPreferencesPage = () => {
   };
 
   return (
-    <FiltersProvider overrideFilters={finalFormData}>
-      <div className={styles['user-property-preferences-page']}>
-        <MyPZContainer>
-          <h1>Property Preferences</h1>
-
-          {renderAlert()}
-          <UserPropertyPreferencesForm
-            onSubmit={handleSubmitForm}
-            disabled={isProcessing}
-            data={data}
-          />
-
-        </MyPZContainer>
-      </div>
-    </FiltersProvider>
+    <>
+      <Head>
+        <title>Your Property Preferences | Zeekeez</title>
+        <meta name="description" content="Look at your Property Preferences"/>
+      </Head>
+      <FiltersProvider overrideFilters={finalFormData}>
+        <div className={styles['user-property-preferences-page']}>
+          <MyPZContainer>
+            <h1>Property Preferences</h1>
+            {renderAlert()}
+            <UserPropertyPreferencesForm
+              onSubmit={handleSubmitForm}
+              disabled={isProcessing}
+              data={data}
+            />
+          </MyPZContainer>
+        </div>
+      </FiltersProvider>
+    </>
   );
 };
 
