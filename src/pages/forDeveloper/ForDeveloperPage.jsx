@@ -248,7 +248,7 @@ const ForDeveloperPage = () => {
       </div>
     </div>
   );
-
+  //schemaJson.description = '';
   return (
     <div className={styles['for-developer-page']}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />

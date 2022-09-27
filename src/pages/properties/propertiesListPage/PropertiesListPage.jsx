@@ -182,7 +182,7 @@ const PropertiesListPage = (props) => {
       </div>
     );
   };
-
+  schemaJson.description = mainTitle;
   return (
     <div className={styles['properties-list-page']}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />

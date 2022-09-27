@@ -220,7 +220,7 @@ const CareerPage = (props) => {
 
 const ContentSidebar = (props) => {
   const { title, children } = props;
-
+  //schemaJson.description = postDetail.Name;
   return (
     <div className={styles['page-career__sidebar__block']}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />

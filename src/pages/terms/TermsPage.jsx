@@ -50,7 +50,7 @@ const TermsPage = (props) => {
 
     return <li key={c}>{c}</li>;
   });
-
+  //schemaJson.description = '';
   return (
     <div className={styles['page-terms']}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />

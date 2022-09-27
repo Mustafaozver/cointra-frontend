@@ -249,7 +249,7 @@ const ForBrokerPage = () => {
       </div>
     </div>
   );
-
+  //schemaJson.description = '';
   return (
     <div className={styles['for-broker-page']}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />

@@ -41,7 +41,7 @@ const BlogPage = (props) => {
     title,
   } = props;
   const router = useRouter();
-
+  //schemaJson.description = '';
   const renderPost = (post) => {
     return (
       <div className={styles['page-blog__post']} key={post.id}>

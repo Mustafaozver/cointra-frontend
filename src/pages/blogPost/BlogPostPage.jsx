@@ -49,6 +49,7 @@ const BlogPostPage = (props) => {
       };
     }
   })();
+  schemaJson.description = postDetail.Name;
   return (<div className={styles['page-blog-post']}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
     <MyPZContainer>

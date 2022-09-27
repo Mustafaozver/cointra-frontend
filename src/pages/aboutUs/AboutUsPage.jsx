@@ -32,6 +32,8 @@ const schemaJson = {
   ]
 };
 
+//schemaJson.description = '';
+
 const AboutUsPage = (props) => (
   <div className={styles['page-about-us']}>
     <MyPZContainer>

@@ -48,7 +48,7 @@ const PrivacyPolicyPage = () => {
 
     return <li key={c}>{c}</li>;
   });
-
+  //schemaJson.description = '';
   return (
     <div className={styles['page-privacy-policy']}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />

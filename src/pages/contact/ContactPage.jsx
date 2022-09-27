@@ -241,7 +241,7 @@ const ContactPage = (props) => {
 
 const ContentSidebar = (props) => {
   const { title, children } = props;
-
+  //schemaJson.description = '';
   return (
     <div className={styles['page-contact__sidebar__block']}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
