@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useContext, useEffect } from 'react';
+import Head from 'next/head';
+
 import queryString from 'query-string';
 import { useRouter } from 'next/router';
 
@@ -309,21 +311,28 @@ const HomePage = (props) => {
   
   
   return (
-    <div className={styles['home-page']}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
-      <div className={styles['home-page_section-header']}>
-        {renderFilterProps()}
+    <>
+      <Head>
+        <title>Properties for sale and to rent UAE - Dubai | Zeekeez</title>
+        <meta name="description" content="Rent or buy your property in Dubai and UAE with Zeekeez, real estate portal and home finder: house, apartment, luxury villa, studio, office, commercial…" />
+        <meta name="keywords" content="property portal for UAE, apartments for sale in UAE, villas to rent in UAE, best property finder alternative" />
+      </Head>
+      <div className={styles['home-page']}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
+        <div className={styles['home-page_section-header']}>
+          {renderFilterProps()}
+        </div>
+        <MyPZContainer>
+          <h1 className={styles['home-page__title']}>Find properties for rent and for sale in Dubai and in the UAE</h1>
+        </MyPZContainer>
+        {renderDescription()}
+        {renderSuggestions()}
+        {renderHowItWorks()}
+        {renderWhyZeekeez()}
+        {renderLastNews()}
+        {renderSeoLinks()}
       </div>
-      <MyPZContainer>
-        <h1 className={styles['home-page__title']}>Find properties for rent and for sale in Dubai and in the UAE</h1>
-      </MyPZContainer>
-      {renderDescription()}
-      {renderSuggestions()}
-      {renderHowItWorks()}
-      {renderWhyZeekeez()}
-      {renderLastNews()}
-      {renderSeoLinks()}
-    </div>
+    </>
   );
 };
 
