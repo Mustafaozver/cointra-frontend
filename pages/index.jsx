@@ -35,9 +35,6 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>
-        Property Portal UAE - Best Property Finder Alternative | zeekeez.com
-        </title>
         <meta name="description" content="Zeekeez.com is the biggest property portal in the UAE with a broad scope of residential and commercial properties available for sale and for rent." />
         <meta name="keywords" content="property portal for UAE, apartments for sale in UAE, villas to rent in UAE, best property finder alternative" />
       </Head>

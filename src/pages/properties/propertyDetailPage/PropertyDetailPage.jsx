@@ -228,20 +228,20 @@ const PropertyDetailPage = (props) => {
   const NavBarBuild = ()=>{
     const arr = [];
     arr.push({ Path: 'Home', Url: '/' });
-    console.log('CAT => ', property.category, ', SR => ', property.businessType);
     switch (property.businessType){
     case 'sale':
-      arr.push({ Path: 'Properties for sale in the UAE', Url: '/en/sale/properties-for-sale' });
+      if (property.price > 10000000) arr.push({ Path: 'Luxury Properties for sale in UAE', Url: '/en/sale/luxury-properties-for-sale-in-uae' });
+      else arr.push({ Path: 'Properties for sale in the UAE', Url: '/en/sale/properties-for-sale' });
       break;
     case 'rent':
-      arr.push({ Path: 'Properties for rent in the UAE', Url: '/en/rent/properties-for-rent' });
+      if (property.price > 500000) arr.push({ Path: 'Luxury Properties for rent in UAE', Url: '/en/rent/luxury-properties-for-rent-in-uae' });
+      else arr.push({ Path: 'Properties for rent in the UAE', Url: '/en/rent/properties-for-rent' });
       break;
       defalut:
       //arr.push({ Path: 'Home', Url: '/' });
       break;
     }
     arr.push({ Path: property.title, Url: '/en/properties/' + property.slug });
-    console.log(property);
     return arr;
   };
   
