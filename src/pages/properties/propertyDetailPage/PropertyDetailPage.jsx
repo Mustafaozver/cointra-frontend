@@ -244,9 +244,48 @@ const PropertyDetailPage = (props) => {
     arr.push({ Path: property.title, Url: '/en/properties/' + property.slug });
     return arr;
   };
-  //<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
+  const generateSchemaJson = ()=>{
+    console.log(property);
+    if (true || property.category == 'residential') return(<script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'SingleFamilyResidence',
+      name: property.title,
+      description: property.description,
+      numberOfRooms: property.bedrooms,
+      /*occupancy: {
+        '@type': 'QuantitativeValue',
+        minValue: 1,
+        maxValue: 5
+      },*/
+      /*floorSize: {
+        '@type': 'QuantitativeValue',
+        value: 2500,
+        unitCode: 'FTK'
+      },*/
+      /*leaseLength: {
+        '@type': 'QuantitativeValue',
+        value: 6,
+        unitText: 'months'
+      },*/
+      numberOfBathroomsTotal: property.bathrooms,
+      numberOfBedrooms: property.bedrooms,
+      //permittedUsage: 'Perfectly suitable for a family with two kids.',
+      //petsAllowed: 'Only cats are allowed',
+      //yearBuilt: 1988,
+      address: {
+        '@type': 'PostalAddress',
+        //addressCountry: 'CA',
+        //addressLocality: 'Vancouver',
+        addressRegion: property.locations[0].name,
+        //postalCode: 'V5T 1Z7',
+        streetAddress: property.locationName,
+      },
+      //telephone: '+1-604-829-6070'
+    }) }} />);
+  };
   return (
     <div className={styles['property-detail-page']}>
+      {generateSchemaJson()}
       <MyPZContainer>
         <NavigationBar
           Paths={NavBarBuild()}

@@ -381,7 +381,7 @@ const SeoLinks = () => (
             to="/en/rent/stores-for-rent-in-dubai"
             linkType="simple"
           >
-            Studio for Rent in Dubai
+            Stores for Rent in Dubai
           </MyPZLink>
         </div>
         <div className={styles['seo-links_item_link']} key="/en/sale/stores-for-sale-in-dubai">
@@ -389,7 +389,7 @@ const SeoLinks = () => (
             to="/en/sale/stores-for-sale-in-dubai"
             linkType="simple"
           >
-            Studio for Sale in Dubai
+            Stores for Sale in Dubai
           </MyPZLink>
         </div>
         <div className={styles['seo-links_item_link']} key="/en/rent/commercial-for-rent-in-dubai">
