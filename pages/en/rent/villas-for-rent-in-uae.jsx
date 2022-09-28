@@ -47,8 +47,8 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>Villas for rent in UAE | Villa for rent in Dubai |Properties find at Zeekeez</title>
-        <meta name="description" content="4266 Villas for rent in UAE on zeekeez.com. Spacious units, fully upgraded, affordable ready to move easy payment options. Now find world class properties here."/>
+        <title>Villas for rent in UAE | Zeekeez</title>
+        <meta name="description" content="Top exclusive villas to rent in UAE are by Zeekeez: luxury villas, affordable houses, townhouses, private pool, private beach, sea view… Find your next home!"/>
         <meta name="keywords" content="villa for rent in Dubai, villa for rent in the palm Jumeirah, villas to rent in Abu Dhabi, villas for rent in UAE, villas for rent in Abu Dhabi, villas for rent in Dubai investment park" />
         {PrevLinksRenderer()}
         {NextLinksRenderer()}

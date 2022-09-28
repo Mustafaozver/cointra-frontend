@@ -47,8 +47,8 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>Properties for Rent in Dubai | zeekeez.com</title>
-        <meta name="description" content="Properties to Rent in Dubai UAE. Rent Residential Properties in UAE : Apartments, Villas, Flats, Duplexes, Lofts, Penthouses, Studios, 1 Bedroom, Full Floors..."/>
+        <title>Dubai: Properties for rent | Zeekeez</title>
+        <meta name="description" content="Search properties to rent in Dubai UAE. Rent Residential Properties in Dubai: apartments, villas, flats, , studios, 1 bedrooms… Short term & long term rentals"/>
         {PrevLinksRenderer()}
         {NextLinksRenderer()}
       </Head>

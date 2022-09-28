@@ -47,8 +47,8 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>Apartments to rent in Dubai | 3129 Apartments for rent in Dubai UAE</title>
-        <meta name="description" content="Might it be said that you are searching a property for rent in Dubai? Observe an apartments or villas or commercial space of your decision, we offer a wide scope of residential properties. Reach us Now !"/>
+        <title>Apartments for rent in Dubai UAE | Zeekeez</title>
+        <meta name="description" content="Searching your next apartment for rent in Dubai? Browse thousands of exclusive flats with our home finder: apartments, duplexes, penthouses... Yallah !"/>
         <meta name="keywords" content="apartments to rent in Dubai, apartments for rent in business bay, apartments for rent in Dubai land, house for rent in Dubai, apartment for rent in downtown Dubai, apartments to rent in Dubai marina" />
         {PrevLinksRenderer()}
         {NextLinksRenderer()}
