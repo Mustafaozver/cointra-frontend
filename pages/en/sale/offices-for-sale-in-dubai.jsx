@@ -47,8 +47,8 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>Offices for Sale in Dubai | zeekeez.com</title>
-        <meta name="description" content="Offices for Sale in Dubai UAE. Buy Sell Commercial Properties in Dubai : Office, Full Floor, Full Building..."/>
+        <title>Dubai: Offices for sale | Zeekeez</title>
+        <meta name="description" content="Buy sell best offices in Dubai on Zeekeez! Browse thousands of offices for sale in Dubai: offices, full floors, buildings… Invest smartly in Dubai real estate!"/>
         {PrevLinksRenderer()}
         {NextLinksRenderer()}
       </Head>

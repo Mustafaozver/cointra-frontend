@@ -47,8 +47,8 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>Houses for rent in Dubai cheap | Houses for rent in Dubai UAE</title>
-        <meta name="description" content="Reasonable property accessible in Dubai at staggering costs. Look at Now. Multiple options is available here houses, apartments, villas, flats, townhouses, beach views."/>
+        <title>Houses for rent in Dubai UAE | Zeekeez</title>
+        <meta name="description" content="Looking to rent your next house in Dubai and UAE? Discover our range of exclusive residential properties: villas, apartments, penthouses... Yallah!"/>
         <meta name="keywords" content="Houses for rent in Dubai Cheap, townhomes for rent in Dubai, villas to rent in Sharjah, apartment for rent in Abu Dhabi" />
         {PrevLinksRenderer()}
         {NextLinksRenderer()}

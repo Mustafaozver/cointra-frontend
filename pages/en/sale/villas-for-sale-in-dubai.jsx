@@ -47,8 +47,8 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>Villas for Sale in Dubai | zeekeez.com</title>
-        <meta name="description" content="Villas for Sale in Dubai UAE. Buy Sell Residential Properties in UAE : Villas, Houses, Homes, Townhouses..."/>
+        <title>Dubai: Villas for Sale | zeekeez.com</title>
+        <meta name="description" content="Dubai: Buy sell best villas on the top trusted property portal – Zeekeez! Home finder to find your next home: villa with pool, garden, private beach... Yallah!"/>
         {PrevLinksRenderer()}
         {NextLinksRenderer()}
       </Head>

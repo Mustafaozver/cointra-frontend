@@ -47,8 +47,8 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>Affordable Office on rent in Dubai, UAE |Office space for rent in Dubai-Zeekeez</title>
-        <meta name="description" content="3129 Offices for rent in Dubai UAE, Completely outfitted adjusted workplaces are accessible for rent in Dubai. Book your office for rent in Dubai outfitted with all cutting edge office conveniences."/>
+        <title>Dubai: Affordable office rentals | Zeekeez</title>
+        <meta name="description" content="Best offices to rent in Dubai. Completely outfitted adjusted workplaces for rent in Dubai. Book your office for rent in Dubai: short term, long term, monthly..."/>
         <meta name="keywords" content="Offices for rent in Dubai UAE, office space for rent in Dubai, office on rent in Dubai" />
         {PrevLinksRenderer()}
         {NextLinksRenderer()}

@@ -47,8 +47,8 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>Apartments for sale in Dubai | 7004 Apartments for sale in Dubai UAE| Zeekeez</title>
-        <meta name="description" content="Luxury apartments for sale in Dubai. Fully furnished handover soon 1,2,3,4 bedroom apartments, penthouse, studio, duplex, villas. Kindly get in touch with us."/>
+        <title>Dubai: Apartments for sale | Zeekeez</title>
+        <meta name="description" content="Dubai: Buy sell top apartments with Zeekeez. Dubai’s largest choice of flat is here! Find your next home: apartments, penthouses, lofts, studios... Yallah!"/>
         <meta name="keywords" content="apartments for sale in Dubai silicon oasis, apartments for sale in Dubai, apartments for sale in Dubai hills estate" />
         {PrevLinksRenderer()}
         {NextLinksRenderer()}
