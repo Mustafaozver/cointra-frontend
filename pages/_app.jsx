@@ -15,6 +15,14 @@ import We from '../public/assets/we';
 
 We.Setup();
 
+
+const schemaJson_WebPage = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Zeekeez',
+  description: 'Zeekez.com is the 1st UAE’s Property Portal for people to explore, research and share their interests for the UAE property market.',
+};
+
 export default function MyApp(props) {
   const { Component, pageProps, router } = props;
 
@@ -69,6 +77,7 @@ export default function MyApp(props) {
         </noscript>
       </Head>
       <MainLayout>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson_WebPage) }} />
         <Component {...pageProps} />
       </MainLayout>
     </MyPZLinkContext.Provider>

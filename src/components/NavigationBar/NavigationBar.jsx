@@ -14,6 +14,14 @@ const NavigationBar = (props) => {
       <nav>
         <ol className={styles['NavigationBar_OutSide']}>
           {path.map((item, index) => {
+            schemaJson_BreadcrumbList.itemListElement.push({
+              '@type': 'ListItem',
+              position: index + 1,
+              item: {
+                '@id': 'https://www.zeekeez.com' + item.Url,
+                name: item.Path
+              }
+            });
             return (
               <li className={styles['NavigationBar_Step']} key={'NavigationBar_'+index}>
                 {index == isFirst ?
@@ -43,9 +51,15 @@ const NavigationBar = (props) => {
     );
   };
   const { Paths } = props;
+  const schemaJson_BreadcrumbList = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [],
+  };
   return (
     <div className={styles['NavigationBar']}>
       {BuildPathUI(Paths)}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson_BreadcrumbList) }} />
     </div>
   );
 };

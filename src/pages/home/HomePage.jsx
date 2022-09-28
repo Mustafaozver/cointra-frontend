@@ -285,7 +285,7 @@ const HomePage = (props) => {
     </MyPZContainer>);
   };
   
-  const schemaJson = {
+  const schemaJson_Organization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zeekeez',
@@ -318,7 +318,7 @@ const HomePage = (props) => {
         <meta name="keywords" content="property portal for UAE, apartments for sale in UAE, villas to rent in UAE, best property finder alternative" />
       </Head>
       <div className={styles['home-page']}>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson_Organization) }} />
         <div className={styles['home-page_section-header']}>
           {renderFilterProps()}
         </div>

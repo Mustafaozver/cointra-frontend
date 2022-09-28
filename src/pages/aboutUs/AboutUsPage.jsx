@@ -8,7 +8,7 @@ import AboutUsInterest from '../../components/statics/aboutUs/aboutUsInterest/Ab
 import AboutUsEthics from '../../components/statics/aboutUs/aboutUsEthics/AboutUsEthics';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
 
-const schemaJson = {
+const schemaJson_Organization = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Zeekeez',
@@ -43,7 +43,7 @@ const AboutUsPage = (props) => (
           { Path: 'About Us', Url: '/en/about-us' },
         ]}
       ></NavigationBar>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson_Organization) }} />
       <AboutUsTitle {...props} />
       <AboutUsInterest />
       <AboutUsEthics />
