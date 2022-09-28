@@ -244,10 +244,9 @@ const PropertyDetailPage = (props) => {
     arr.push({ Path: property.title, Url: '/en/properties/' + property.slug });
     return arr;
   };
-  schemaJson.description = property.slug;
+  //<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
   return (
     <div className={styles['property-detail-page']}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
       <MyPZContainer>
         <NavigationBar
           Paths={NavBarBuild()}
