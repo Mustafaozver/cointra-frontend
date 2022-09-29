@@ -15,6 +15,7 @@ import PropertyPrice from '../../../components/properties/components/propertyPri
 import PropertyHighlight from '../../../components/properties/propertyHighlight/PropertyHighlight';
 import PropertySectionAmenities from '../../../components/properties/propertySectionAmenities/PropertySectionAmenities';
 import PropertySectionDetails from '../../../components/properties/propertySectionDetails/PropertySectionDetails';
+import propertyTypesConfig from '../../../data/config/propertyTypesConfig';
 import PropertyDetailsAgent from '../../../components/properties/propertyDetailsAgent/PropertyDetailsAgent';
 import ContactPopup from '../../../components/popup/contactPopup/ContactPopup';
 import config from '../../../config/Config';
@@ -245,43 +246,92 @@ const PropertyDetailPage = (props) => {
     return arr;
   };
   const generateSchemaJson = ()=>{
-    console.log(property);
-    if (true || property.category == 'residential') return(<script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    console.log('property', property);
+    var schemaJson = {
       '@context': 'https://schema.org',
-      '@type': 'SingleFamilyResidence',
       name: property.title,
       description: property.description,
-      numberOfRooms: property.bedrooms,
-      /*occupancy: {
-        '@type': 'QuantitativeValue',
-        minValue: 1,
-        maxValue: 5
-      },*/
-      /*floorSize: {
-        '@type': 'QuantitativeValue',
-        value: 2500,
-        unitCode: 'FTK'
-      },*/
-      /*leaseLength: {
-        '@type': 'QuantitativeValue',
-        value: 6,
-        unitText: 'months'
-      },*/
-      numberOfBathroomsTotal: property.bathrooms,
-      numberOfBedrooms: property.bedrooms,
-      //permittedUsage: 'Perfectly suitable for a family with two kids.',
-      //petsAllowed: 'Only cats are allowed',
-      //yearBuilt: 1988,
+      url: 'https://www.zeekeez.com/en/properties/' + property.slug,
+      //image: property.images[0],
+      latitude: property.geopoint.lat,
+      longitude: property.geopoint.lon,
       address: {
         '@type': 'PostalAddress',
-        //addressCountry: 'CA',
-        //addressLocality: 'Vancouver',
-        addressRegion: property.locations[0].name,
-        //postalCode: 'V5T 1Z7',
-        streetAddress: property.locationName,
+        addressCountry: 'UAE',
+        //addressRegion: property.locations[0].name,
+        addressLocality: property.locationName,
       },
-      //telephone: '+1-604-829-6070'
-    }) }} />);
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: property.geopoint.lat,
+        longitude: property.geopoint.lon,
+      },
+    };
+    
+    if(property.images.length > 0) schemaJson.image = property.images[0];
+    if(property.locations.length > 0) schemaJson.address.addressRegion = property.locations[0].name;
+    
+    switch(property.type){
+    case 'FAC':
+    case 'STF':
+    case 'LAN':
+    case 'OFF':
+    case 'RET':
+    case 'RES':
+    case 'SHP':
+    case 'SHW':
+    case 'STO':
+    case 'WAR':
+    case 'BUN': // commercial
+      schemaJson['@type'] = 'Apartment';
+      schemaJson.floorSize = {
+        '@type': 'QuantitativeValue',
+		    unitText2: 'SQFT',
+		    value: property.size,
+      };
+      
+      break;
+    case 'APT':
+    case 'COM':
+    case 'DUP':
+    case 'PEN':
+    case 'LFT': // resident
+      schemaJson['@type'] = 'Apartment';
+      
+      schemaJson.floorSize = {
+        '@type': 'QuantitativeValue',
+		    unitText2: 'SQFT',
+		    value: property.size,
+      };
+      schemaJson.numberOfRooms = property.bedrooms + property.bathrooms;
+      schemaJson.numberOfBathroomsTotal = property.bathrooms;
+      schemaJson.numberOfBedrooms = property.bedrooms;
+      
+      break;
+    }
+    
+    switch(property.type){
+    case 'BUL':
+    case 'FFL':
+    case 'HFL':
+    case 'HTA':
+    case 'TWN':
+    case 'VIL':
+    case 'BUI':
+    case 'HOT': // both
+      schemaJson['@type'] = 'SingleFamilyResidence';
+      schemaJson.floorSize = {
+        '@type': 'QuantitativeValue',
+		    unitText2: 'SQFT',
+		    value: property.size,
+      };
+      schemaJson.numberOfRooms = property.bedrooms + property.bathrooms;
+      schemaJson.numberOfBathroomsTotal = property.bathrooms;
+      schemaJson.numberOfBedrooms = property.bedrooms;
+      break;
+    }
+    console.log('schemaJson', schemaJson);
+    return(<script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />);
   };
   return (
     <div className={styles['property-detail-page']}>
