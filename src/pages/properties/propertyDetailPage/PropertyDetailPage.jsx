@@ -287,7 +287,7 @@ const PropertyDetailPage = (props) => {
       schemaJson.floorSize = {
         '@type': 'QuantitativeValue',
 		    unitText2: 'SQFT',
-		    value: property.size,
+		    value: ''+property.size,
       };
       
       break;
@@ -301,7 +301,7 @@ const PropertyDetailPage = (props) => {
       schemaJson.floorSize = {
         '@type': 'QuantitativeValue',
 		    unitText2: 'SQFT',
-		    value: property.size,
+		    value: ''+property.size,
       };
       schemaJson.numberOfRooms = property.bedrooms + property.bathrooms;
       schemaJson.numberOfBathroomsTotal = property.bathrooms;
@@ -323,7 +323,7 @@ const PropertyDetailPage = (props) => {
       schemaJson.floorSize = {
         '@type': 'QuantitativeValue',
 		    unitText2: 'SQFT',
-		    value: property.size,
+		    value: ''+property.size,
       };
       schemaJson.numberOfRooms = property.bedrooms + property.bathrooms;
       schemaJson.numberOfBathroomsTotal = property.bathrooms;

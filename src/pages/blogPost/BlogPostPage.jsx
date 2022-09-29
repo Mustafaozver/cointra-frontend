@@ -25,6 +25,34 @@ const BlogPostPage = (props) => {
       };
     }
   })();
+  const schemaJson_BlogPosting = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://www.zeekeez.com' + postDetail.Url + '/' + post.slug,
+    },
+    headline: post.title,
+    description: post.metaDescription,
+    image: post.coverImageUrl,
+    author: { // who is outhor
+      '@type': 'Organization', // or zeekeez
+      name: 'Zeekeez',
+      url: 'https://www.zeekeez.com/',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zeekeez',
+      url: 'https://www.zeekeez.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.zeekeez.com/images/zeekeez-logo-black.svg'
+      }
+    },
+    datePublished: (new Date(post.publishedAt)).toLocaleDateString().split('.').reverse().join('-'),
+    dateModified: (new Date(post.updatedAt)).toLocaleDateString().split('.').reverse().join('-'),
+  };
+  console.log(schemaJson_BlogPosting);
   return (<div className={styles['page-blog-post']}>
     <MyPZContainer>
       <NavigationBar
@@ -34,6 +62,7 @@ const BlogPostPage = (props) => {
           { Path: postDetail.Name, Url: postDetail.Name },
         ]}
       ></NavigationBar>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson_BlogPosting) }} />
       <h1>{post.title}</h1>
       <div className={styles['page-blog-post__header']}>
         <img src={post.coverImageUrl} alt={post.title} />
