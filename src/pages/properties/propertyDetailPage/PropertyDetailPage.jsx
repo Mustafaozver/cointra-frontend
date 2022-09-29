@@ -268,7 +268,7 @@ const PropertyDetailPage = (props) => {
       },
     };
     
-    if(property.images.length > 0) schemaJson.image = property.images[0];
+    if(property.images.length > 0) schemaJson.image = property.images[0].path;
     if(property.locations.length > 0) schemaJson.address.addressRegion = property.locations[0].name;
     
     switch(property.type){
