@@ -52,7 +52,6 @@ const BlogPostPage = (props) => {
     datePublished: (new Date(post.publishedAt)).toLocaleDateString().split('.').reverse().join('-'),
     dateModified: (new Date(post.updatedAt)).toLocaleDateString().split('.').reverse().join('-'),
   };
-  console.log(schemaJson_BlogPosting);
   return (<div className={styles['page-blog-post']}>
     <MyPZContainer>
       <NavigationBar

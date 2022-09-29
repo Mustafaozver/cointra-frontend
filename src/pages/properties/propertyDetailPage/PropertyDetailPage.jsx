@@ -246,7 +246,6 @@ const PropertyDetailPage = (props) => {
     return arr;
   };
   const generateSchemaJson = ()=>{
-    console.log('property', property);
     var schemaJson = {
       '@context': 'https://schema.org',
       name: property.title,
@@ -286,7 +285,7 @@ const PropertyDetailPage = (props) => {
       schemaJson['@type'] = 'Apartment';
       schemaJson.floorSize = {
         '@type': 'QuantitativeValue',
-		    unitText2: 'SQFT',
+		    unitText: 'SQFT',
 		    value: ''+property.size,
       };
       
@@ -300,7 +299,7 @@ const PropertyDetailPage = (props) => {
       
       schemaJson.floorSize = {
         '@type': 'QuantitativeValue',
-		    unitText2: 'SQFT',
+		    unitText: 'SQFT',
 		    value: ''+property.size,
       };
       schemaJson.numberOfRooms = property.bedrooms + property.bathrooms;
@@ -322,7 +321,7 @@ const PropertyDetailPage = (props) => {
       schemaJson['@type'] = 'SingleFamilyResidence';
       schemaJson.floorSize = {
         '@type': 'QuantitativeValue',
-		    unitText2: 'SQFT',
+		    unitText: 'SQFT',
 		    value: ''+property.size,
       };
       schemaJson.numberOfRooms = property.bedrooms + property.bathrooms;
@@ -330,7 +329,6 @@ const PropertyDetailPage = (props) => {
       schemaJson.numberOfBedrooms = property.bedrooms;
       break;
     }
-    console.log('schemaJson', schemaJson);
     return(<script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />);
   };
   return (
