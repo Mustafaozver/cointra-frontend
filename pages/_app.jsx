@@ -12,9 +12,9 @@ import MainLayout from '../src/components/layouts/main/MainLayout';
 import MyPZLinkContext from '../src/mypzkit/components/linkContext/MyPZLinkContext';
 
 import We from '../public/assets/we';
+import FontAwesome from '../public/assets/scss/font-awesome.scss';
 
 We.Setup();
-
 
 const schemaJson_WebPage = {
   '@context': 'https://schema.org',

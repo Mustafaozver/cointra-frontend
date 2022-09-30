@@ -30,7 +30,7 @@
 .NavigationBar_Continues_Step {
 	font-size: inherit;
 	&::before {
-		content: "> ";
+		content: "";
 		font-weight: bold;
 		color:#3a3a3a;
 		

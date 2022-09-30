@@ -27,7 +27,7 @@ const NavigationBar = (props) => {
                 {index == isFirst ?
                   <span className={styles['NavigationBar_First_Step']}></span> // first step
                   : 
-                  <span className={styles['NavigationBar_Continues_Step']}></span> // continues step
+                  <span className={styles['NavigationBar_Continues_Step']} dangerouslySetInnerHTML={{ __html: '<i class=\"fa fa-angle-right\""></i> ' }}></span> // continues step
                 }
                 {index != isLast ?
                   <span className={styles['NavigationBar_Continues_Link']}>
