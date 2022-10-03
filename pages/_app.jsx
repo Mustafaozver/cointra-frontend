@@ -56,6 +56,7 @@ export default function MyApp(props) {
         <meta name="msnbot" content="INDEX, FOLLOW" />
         <meta name="googlebot" content="index,follow" />
       </>);
+    }
     return(<>
       <meta name="Robots" content="INDEX, FOLLOW" />
       <meta name="YahooSeeker" content="INDEX, FOLLOW" />
