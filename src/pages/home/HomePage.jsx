@@ -313,7 +313,7 @@ const HomePage = (props) => {
   return (
     <>
       <Head>
-        <title>Properties for sale and to rent UAE - Dubai | Zeekeez</title>
+        <title>Properties for sale and to rent UAE Dubai | Zeekeez</title>
         <meta name="description" content="Rent or buy your property in Dubai and UAE with Zeekeez, real estate portal and home finder: house, apartment, luxury villa, studio, office, commercial…" />
         <meta name="keywords" content="property portal for UAE, apartments for sale in UAE, villas to rent in UAE, best property finder alternative" />
       </Head>
