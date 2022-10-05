@@ -43,13 +43,7 @@ export default function MyApp(props) {
   const checkCanonical = ()=>{
     const arr = Object.keys(router.query);
     // 
-    if(arr.length > 1) return(<>
-      <meta name="Robots" content="NOINDEX, FOLLOW" />
-      <meta name="YahooSeeker" content="NOINDEX, FOLLOW" />
-      <meta name="msnbot" content="NOINDEX, FOLLOW" />
-      <meta name="googlebot" content="noindex,follow" />
-    </>);
-    else if(arr.length == 1){
+    if(arr.length == 1){
       if(arr[0] == 'page' || arr[0] == 'slug') return(<>
         <meta name="Robots" content="INDEX, FOLLOW" />
         <meta name="YahooSeeker" content="INDEX, FOLLOW" />
@@ -57,6 +51,12 @@ export default function MyApp(props) {
         <meta name="googlebot" content="index,follow" />
       </>);
     }
+    else if(arr.length > 1) return(<>
+      <meta name="Robots" content="NOINDEX, FOLLOW" />
+      <meta name="YahooSeeker" content="NOINDEX, FOLLOW" />
+      <meta name="msnbot" content="NOINDEX, FOLLOW" />
+      <meta name="googlebot" content="noindex,follow" />
+    </>);
     return(<>
       <meta name="Robots" content="INDEX, FOLLOW" />
       <meta name="YahooSeeker" content="INDEX, FOLLOW" />
@@ -65,6 +65,12 @@ export default function MyApp(props) {
     </>);
   };
   
+  const dangerouslyGenerateHTML =()=>{
+    var text = '<!-- External codes -->';
+    text += '<link rel=\"canonical\" href=\"' + config.baseUrl + router.asPath + '\"/>';
+    var htmlObject = (<div dangerouslySetInnerHTML={{ __html: text }}></div>);
+    return htmlObject;
+  };
   
   return (
     <MyPZLinkContext.Provider value={Link}>
@@ -80,7 +86,7 @@ export default function MyApp(props) {
         <meta name="distribution" content="Local" />
         <meta name="page-topic" content="Zeekeez" />
         {checkCanonical()}
-        <link rel="canonical" href={`${config.baseUrl}${router.asPath/*.split('?')[0]*/}`} />
+        {dangerouslyGenerateHTML()}
         <meta name="Rating" content="General" />
         <meta name="allow-search" content="yes" />
         <meta name="expires" content="never" />
