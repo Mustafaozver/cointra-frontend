@@ -76,7 +76,6 @@ export default function MyApp(props) {
     <MyPZLinkContext.Provider value={Link}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <script dangerouslySetInnerHTML={{ __html: "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N4W3JQX');" }} />
         <meta name="author" content="Zeekeez" />
         <meta httpEquiv="x-ua-compatible" content="IE=edge" />
 
@@ -100,9 +99,6 @@ export default function MyApp(props) {
         <meta name="msvalidate.01" content="3C9C2B8E2B1F97EF0A1BC44A458B7648" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="ahrefs-site-verification" content="e2bf64b8fb7392d69161cdaaedd1d8db1b743c7442500822954b767eb954d1d4" />
-        <noscript>
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4W3JQX" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} />
-        </noscript>
       </Head>
       <MainLayout>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson_WebPage) }} />
