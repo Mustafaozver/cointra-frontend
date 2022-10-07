@@ -19,7 +19,9 @@ export const handleResponse = async (res) => {
   if (res.status >= 200 && res.status < 300) {
     return json;
   }
-
+  
+  return json;
+  
   const error = new Error(json.err || 'UNKNOWN');
   error.status = res.status;
   error.errorCode = json.err || 'UNKNOWN';

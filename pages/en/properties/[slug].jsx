@@ -4,9 +4,19 @@ import Head from 'next/head';
 import PropertyDetailPage from '../../../src/pages/properties/propertyDetailPage/PropertyDetailPage';
 import { getProperty } from '../../../src/api/properties/propertiesApi';
 import propertyTypesConfig from '../../../src/data/config/propertyTypesConfig';
+import NotFoundPage from '../../../src/pages/notFound/NotFoundPage';
 
 export async function getServerSideProps(context) {
+  const { req, res, err } = context;
   const property = await getProperty(context.params.slug);
+  if(property.err){
+    res.status = 404;
+    return {
+      props: {
+        property: property
+      }
+    };
+  }
 
   let bedroomTitle = 'studio';
   if (property.bedrooms > 0) {
@@ -47,7 +57,13 @@ export default (props) => {
     metaDescription,
     h1,
   } = props;
-
+  if(property.err){
+    return(
+      <>
+        <NotFoundPage />
+      </>
+    );
+  }
   return (
     <>
       <Head>
