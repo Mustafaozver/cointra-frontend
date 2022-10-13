@@ -7,6 +7,8 @@ import { useRouter } from 'next/router';
 
 import styles from './HomePage.module.scss';
 
+
+
 import { MyPZContainer, MyPZButton, MyPZShowMore, MyPZLink } from '../../mypzkit';
 import PropertiesFilter from '../../components/propertiesFilters/PropertiesFilters';
 import SeoLinks from '../../components/seo/links/SeoLinks';

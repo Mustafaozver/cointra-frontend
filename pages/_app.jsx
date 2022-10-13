@@ -99,6 +99,7 @@ export default function MyApp(props) {
         <meta name="msvalidate.01" content="3C9C2B8E2B1F97EF0A1BC44A458B7648" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="ahrefs-site-verification" content="e2bf64b8fb7392d69161cdaaedd1d8db1b743c7442500822954b767eb954d1d4" />
+        <meta name="google-site-verification" content="QJAmp9T_HPx49iQGLZuhZkrtxJCyN6d-TnwzRFaS84g" />
       </Head>
       <MainLayout>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson_WebPage) }} />
