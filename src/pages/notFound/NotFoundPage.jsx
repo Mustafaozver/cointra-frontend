@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-
-import PropertiesFilter from '../../components/propertiesFilters/PropertiesFilters';
 import { MyPZButton, MyPZContainer } from '../../mypzkit';
 
 const NotFoundPage = () => (
@@ -17,7 +15,6 @@ const NotFoundPage = () => (
           <MyPZButton>Home</MyPZButton>
         </Link>
       </div>
-      <PropertiesFilter/>
     </MyPZContainer>
   </div>
 );
