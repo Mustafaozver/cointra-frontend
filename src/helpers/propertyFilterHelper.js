@@ -108,7 +108,7 @@ export const filtersToParams = (filters) => {
   if (filters.s) {
     params.s = filters.s;
   } else {
-    params.s = Math.floor(Math.random() * 1000);
+    params.s = 547;//Math.floor(Math.random() * 1000);
   }
 
   return params;
