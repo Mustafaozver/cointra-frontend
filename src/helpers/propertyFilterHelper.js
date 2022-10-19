@@ -108,7 +108,7 @@ export const filtersToParams = (filters) => {
   if (filters.s) {
     params.s = filters.s;
   } else {
-    params.s = 547;//Math.floor(Math.random() * 1000);
+    params.s = (Math.floor((new Date()).getTime() / (1000 * 60 * 60 * 24 * 30)) * 168297) % 1000; // 
   }
 
   return params;
