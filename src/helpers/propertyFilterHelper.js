@@ -108,7 +108,7 @@ export const filtersToParams = (filters) => {
   if (filters.s) {
     params.s = filters.s;
   } else {
-    params.s = (Math.floor((new Date()).getTime() / (1000 * 60 * 60 * 24 * 30)) * 168297) % 1000; // 
+    params.s = (Math.floor((new Date()).getTime() / (1000 * 60 * 60 * 24 * 30)) * 168297) % 1000; // how many mounths (1000 * 60 * 60 * 24 * 30 milliseconds) we passed since 01.01.1970
   }
 
   return params;
