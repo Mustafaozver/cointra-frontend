@@ -1,5 +1,5 @@
 const config = {
-  baseUrl: process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zeekeez.com',
+  baseUrl: process.env.NEXT_PUBLIC_BASE_URL || 'https://zeekeez.com',
   // TODO: put back NEXT_PUBLIC_BASE_API_URL
   baseApiUrl: /*process.env.NEXT_PUBLIC_BASE_API_URL ||*/ 'https://api-stage.zeekeez.com', // 'http://localhost:8005',
   baseCDNUrl: process.env.NEXT_PUBLIC_BASE_CDN_URL || 'https://d23pgcxghat6wz.cloudfront.net/',
