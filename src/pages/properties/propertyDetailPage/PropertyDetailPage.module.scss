@@ -12,6 +12,19 @@
     }
   }
 
+  .property-detail-page__newlabel {
+    position: absolute;
+    margin-top: 0.4em;
+    margin-left: 0.5em;
+    border: 6px solid #2b2d2e;
+    border-radius: 5px;
+    color: white;
+    background-color: #2b2d2e;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.1em 0.5em;
+  }
+
   .property-detail-page__title-h1 {
     font-size: 14px;
     margin: 0.5rem 0;

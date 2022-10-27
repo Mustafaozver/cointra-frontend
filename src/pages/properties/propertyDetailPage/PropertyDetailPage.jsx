@@ -150,11 +150,13 @@ const PropertyDetailPage = (props) => {
     }
     const lng = parseFloat(property.geopoint.lon);
     const lat = parseFloat(property.geopoint.lat);
-
+    const isnew = ((new Date()).getTime() - 1666880457997) < (1000 * 60 * 60 * 48); // property
+    
     return (
       <div>
         {renderGallery()}
         {renderTitle()}
+        {isnew ? <div className={styles['property-detail-page__newlabel']}>NEW</div> : null}
         <div className={styles['property-detail-page__body']}>
           <MyPZContainer className={styles['property-detail-page__body-main']}>
             {renderHighLight()}

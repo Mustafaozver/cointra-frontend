@@ -28,6 +28,18 @@
   }
 }
 
+.property-item-section-newlabel {
+  position: absolute;
+  margin-top: -2.5em;
+  margin-left: 0.5em;
+  border: 6px solid #2b2d2e;
+  border-radius: 5px;
+  color: white;
+  background-color: #2b2d2e;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.1em 0.5em;
+}
 .property-item-list {
   overflow: hidden;
   width: 100%;
@@ -37,7 +49,8 @@
     @include property-item-main-card();
     flex-direction: row;
     overflow: hidden;
-
+    
+    
     .property-item-section-image {
       width: 50%;
 
