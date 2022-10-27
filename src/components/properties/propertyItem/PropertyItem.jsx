@@ -122,7 +122,7 @@ const PropertyItem = (props) => {
       </div>
     );
   };
-  const isnew = ((new Date()).getTime() - 1666880457997) < (1000 * 60 * 60 * 48); // data
+  const isnew = false;//((new Date()).getTime() - 1666880457997) < (1000 * 60 * 60 * 48); // data
   return (
     <div className={styles[`property-item-${view}`]}>
       <Link href={`/en/properties/${data.slug}`} passHref>
