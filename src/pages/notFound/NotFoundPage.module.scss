@@ -1,0 +1,23 @@
+@import "../../mypzkit/components/mypz.scss";
+
+.page-404__body {
+    background-image: url(/images/404.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    color: #000;
+    font-size: 1.5em;
+    line-height: 1.25em;
+    padding: 0 0 1em 0;
+    text-align: justify;
+    text-shadow:
+        0.07em 0 #00000020,
+        0 0.07em #00000020,
+        -0.07em 0 #00000020,
+        0 -0.07em #00000020;
+}
+
+.page-404__body h1 {
+    font-size: 5em;
+    
+}

@@ -150,8 +150,7 @@ const PropertyDetailPage = (props) => {
     }
     const lng = parseFloat(property.geopoint.lon);
     const lat = parseFloat(property.geopoint.lat);
-    const isnew = false;//((new Date()).getTime() - 1666880457997) < (1000 * 60 * 60 * 48); // property
-    
+    const isnew = ((new Date()).getTime() - (new Date(property.listedAt)).getTime()) < (1000 * 60 * 60 * 48);
     return (
       <div>
         {renderGallery()}
